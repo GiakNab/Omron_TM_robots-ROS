@@ -1,0 +1,8 @@
+prefix=/home/giacomo/git_workspace/devel
+
+Name: tm12_nonvision_moveit_config
+Description: Description of tm12_nonvision_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

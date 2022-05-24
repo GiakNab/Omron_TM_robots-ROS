@@ -1,0 +1,8 @@
+prefix=/home/giacomo/git_workspace/devel
+
+Name: ui_for_debug_and_demo
+Description: Description of ui_for_debug_and_demo
+Version: 1.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find robotique_description)/urdf/robotique_85_gripper.urdf.xacro'" />
+    
+    <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model robotiq_85_gripper" />
+          
+</launch>
+
+
