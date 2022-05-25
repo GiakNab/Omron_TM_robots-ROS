@@ -42,10 +42,10 @@ controller_list:
       - robotiq_85_left_knuckle_joint
 
 tm_arm_controller:  
-  type:
+  type: effort_controllers/JointTrajectoryController
   joints:
-    - shoulder_1_joints
-    - shoulder_2_joints
+    - shoulder_1_joint
+    - shoulder_2_joint
     - elbow_1_joint
     - wrist_1_joint
     - wrist_2_joint
@@ -87,7 +87,7 @@ gripper_controller:
   joints:
     - robotiq_85_left_knuckle_joint
   gains:
-    robotiq_85_left_knuckle_joint
+    robotiq_85_left_knuckle_joint:
       p: 40
       d: 0
       i: 1

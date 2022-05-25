@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="tm700" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="tm700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:property name="prefix" value="" />
 
@@ -18,9 +18,5 @@
     <child link="base" />
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
-
-  <!-- eye in hand camera-->
-  <xacro:include filename="$(find tm_description)/urdf/tm700.eih.xacro" />
-  <xacro:tm700_eih_camera prefix="${prefix}" />
 
 </robot>
