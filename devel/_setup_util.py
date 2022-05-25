@@ -33,6 +33,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+
 """This file generates shell code for the setup.SHELL scripts to set environment variables."""
 
 from __future__ import print_function
