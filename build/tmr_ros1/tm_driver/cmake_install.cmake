@@ -1,8 +1,8 @@
-# Install script for directory: /home/giacomo/git_workspace/src/tmr_ros1/tm_driver
+# Install script for directory: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/install")
+  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/omron_test_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,26 +38,26 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver/cmake" TYPE FILE FILES
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driverConfig.cmake"
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driverConfig-version.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driverConfig.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_driver/catkin_generated/installspace/tm_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE FILE FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_driver/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_driver/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_driver/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_driver/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_driver/config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -67,7 +67,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tm_driver/tm_driver"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tm_driver" TYPE EXECUTABLE FILES "/home/giacomo/git_workspace/devel/lib/tm_driver/tm_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tm_driver" TYPE EXECUTABLE FILES "/home/giacomo/git_workspace/omron_test_ws/devel/lib/tm_driver/tm_driver")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tm_driver/tm_driver" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tm_driver/tm_driver")
     file(RPATH_CHANGE
@@ -81,6 +81,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_driver/include/tm_driver/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/tm_driver" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_driver/include/tm_driver/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

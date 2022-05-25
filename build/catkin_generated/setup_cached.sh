@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/giacomo/git_workspace/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/giacomo/git_workspace/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/giacomo/git_workspace/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/giacomo/git_workspace/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/giacomo/git_workspace/omron_test_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/giacomo/git_workspace/omron_test_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/giacomo/git_workspace/omron_test_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/giacomo/git_workspace/omron_test_ws/src:$ROS_PACKAGE_PATH"

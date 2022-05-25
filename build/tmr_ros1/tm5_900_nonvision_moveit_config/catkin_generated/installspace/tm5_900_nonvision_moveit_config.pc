@@ -1,4 +1,4 @@
-prefix=/home/giacomo/git_workspace/install
+prefix=/home/giacomo/git_workspace/omron_test_ws/install
 
 Name: tm5_900_nonvision_moveit_config
 Description: Description of tm5_900_nonvision_moveit_config

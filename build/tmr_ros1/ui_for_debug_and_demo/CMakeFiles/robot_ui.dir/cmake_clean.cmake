@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/robot_ui.dir/src/ros_page.cpp.o"
   "CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o"
   "CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o"
-  "/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui.pdb"
-  "/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui.pdb"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui"
 )
 
 # Per-language clean rules from dependency scanning.

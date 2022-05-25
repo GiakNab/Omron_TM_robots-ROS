@@ -1,12 +1,13 @@
 # CMake generated Testfile for 
-# Source directory: /home/giacomo/git_workspace/src
-# Build directory: /home/giacomo/git_workspace/build
+# Source directory: /home/giacomo/git_workspace/omron_test_ws/src
+# Build directory: /home/giacomo/git_workspace/omron_test_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("tmr_ros1/tm12_description")
 subdirs("tmr_ros1/tm5_description")
+subdirs("tm700_gripper_moveit_config")
 subdirs("tmr_ros1/tm_description")
 subdirs("robotiq/robotiq_description")
 subdirs("tmr_ros1/tmr_description")

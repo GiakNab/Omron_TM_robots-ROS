@@ -1,8 +1,8 @@
-# Install script for directory: /home/giacomo/git_workspace/src/tmr_ros1/tm_demo
+# Install script for directory: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/install")
+  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/omron_test_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_demo/cmake" TYPE FILE FILES
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demoConfig.cmake"
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demoConfig-version.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demoConfig.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_demo/catkin_generated/installspace/tm_demoConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_demo" TYPE FILE FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_demo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_demo" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_demo/package.xml")
 endif()
 

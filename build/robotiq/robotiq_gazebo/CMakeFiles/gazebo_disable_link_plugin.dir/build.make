@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/src
+CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/omron_test_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
+CMAKE_BINARY_DIR = /home/giacomo/git_workspace/omron_test_ws/build
 
 # Include any dependencies generated for this target.
 include robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/depend.make
@@ -58,17 +58,17 @@ include robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/progres
 include robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/flags.make
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/flags.make
-robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o: /home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o"
-	cd /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o -c /home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
+robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o: /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.i"
-	cd /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp > CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp > CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.i
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.s"
-	cd /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp -o CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp -o CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.s
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o.requires:
 
@@ -88,158 +88,158 @@ gazebo_disable_link_plugin_OBJECTS = \
 # External object files for target gazebo_disable_link_plugin
 gazebo_disable_link_plugin_EXTERNAL_OBJECTS =
 
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/build.make
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroslib.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librospack.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libactionlib.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcontrol_toolbox.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librealtime_tools.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.1.1
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.2.0
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libactionlib.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcontrol_toolbox.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librealtime_tools.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so"
-	cd /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_disable_link_plugin.dir/link.txt --verbose=$(VERBOSE)
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/build.make
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroslib.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librospack.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libactionlib.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcontrol_toolbox.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librealtime_tools.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.1.1
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.2.0
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libactionlib.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libtf2.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcontrol_toolbox.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librealtime_tools.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so: robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_disable_link_plugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/build: /home/giacomo/git_workspace/devel/lib/libgazebo_disable_link_plugin.so
+robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/build: /home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_disable_link_plugin.so
 
 .PHONY : robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/build
 
@@ -248,10 +248,10 @@ robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/requires: robot
 .PHONY : robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/requires
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/clean:
-	cd /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_disable_link_plugin.dir/cmake_clean.cmake
+	cd /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_disable_link_plugin.dir/cmake_clean.cmake
 .PHONY : robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/clean
 
 robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/depend:
-	cd /home/giacomo/git_workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/src /home/giacomo/git_workspace/src/robotiq/robotiq_gazebo /home/giacomo/git_workspace/build /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo /home/giacomo/git_workspace/build/robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giacomo/git_workspace/omron_test_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/omron_test_ws/src /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo /home/giacomo/git_workspace/omron_test_ws/build /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo /home/giacomo/git_workspace/omron_test_ws/build/robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robotiq/robotiq_gazebo/CMakeFiles/gazebo_disable_link_plugin.dir/depend
 

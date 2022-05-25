@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/src
+CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/omron_test_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
+CMAKE_BINARY_DIR = /home/giacomo/git_workspace/omron_test_ws/build
 
 # Utility rule file for tm_msgs_genpy.
 
@@ -63,10 +63,10 @@ tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/build: tm_msgs_genpy
 .PHONY : tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/build
 
 tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/clean:
-	cd /home/giacomo/git_workspace/build/tmr_ros1/tm_msgs && $(CMAKE_COMMAND) -P CMakeFiles/tm_msgs_genpy.dir/cmake_clean.cmake
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_msgs && $(CMAKE_COMMAND) -P CMakeFiles/tm_msgs_genpy.dir/cmake_clean.cmake
 .PHONY : tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/clean
 
 tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/depend:
-	cd /home/giacomo/git_workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/src /home/giacomo/git_workspace/src/tmr_ros1/tm_msgs /home/giacomo/git_workspace/build /home/giacomo/git_workspace/build/tmr_ros1/tm_msgs /home/giacomo/git_workspace/build/tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giacomo/git_workspace/omron_test_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/omron_test_ws/src /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_msgs /home/giacomo/git_workspace/omron_test_ws/build /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_msgs /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tmr_ros1/tm_msgs/CMakeFiles/tm_msgs_genpy.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/src
+CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/omron_test_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
+CMAKE_BINARY_DIR = /home/giacomo/git_workspace/omron_test_ws/build
 
 # Utility rule file for robot_ui_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
 include tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/progress.make
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target robot_ui"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/cmake -E cmake_autogen /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC, UIC and RCC for target robot_ui"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/cmake -E cmake_autogen /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir ""
 
 robot_ui_autogen: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen
 robot_ui_autogen: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/build.make
@@ -68,10 +68,10 @@ tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/build: robot_ui_a
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/build
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/clean:
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -P CMakeFiles/robot_ui_autogen.dir/cmake_clean.cmake
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -P CMakeFiles/robot_ui_autogen.dir/cmake_clean.cmake
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/clean
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/depend:
-	cd /home/giacomo/git_workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/src /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/build /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giacomo/git_workspace/omron_test_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/omron_test_ws/src /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/omron_test_ws/build /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/depend
 

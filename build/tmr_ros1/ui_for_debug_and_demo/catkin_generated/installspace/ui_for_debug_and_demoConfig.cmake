@@ -67,14 +67,14 @@ set(ui_for_debug_and_demo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ui_for_debug_and_demo_SOURCE_PREFIX /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo)
-  set(ui_for_debug_and_demo_DEVEL_PREFIX /home/giacomo/git_workspace/devel)
+  set(ui_for_debug_and_demo_SOURCE_PREFIX /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo)
+  set(ui_for_debug_and_demo_DEVEL_PREFIX /home/giacomo/git_workspace/omron_test_ws/devel)
   set(ui_for_debug_and_demo_INSTALL_PREFIX "")
   set(ui_for_debug_and_demo_PREFIX ${ui_for_debug_and_demo_DEVEL_PREFIX})
 else()
   set(ui_for_debug_and_demo_SOURCE_PREFIX "")
   set(ui_for_debug_and_demo_DEVEL_PREFIX "")
-  set(ui_for_debug_and_demo_INSTALL_PREFIX /home/giacomo/git_workspace/install)
+  set(ui_for_debug_and_demo_INSTALL_PREFIX /home/giacomo/git_workspace/omron_test_ws/install)
   set(ui_for_debug_and_demo_PREFIX ${ui_for_debug_and_demo_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/giacomo/git_workspace/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/giacomo/git_workspace/omron_test_ws/install/lib;/home/giacomo/omron_test_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/AskSta.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/AskSta.h
 ros/service_traits.h
 -
 tm_msgs/AskStaRequest.h
@@ -14,7 +14,7 @@ tm_msgs/AskStaRequest.h
 tm_msgs/AskStaResponse.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/AskStaRequest.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/AskStaRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/AskStaResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/AskStaResponse.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/src/tmr_ros1/demo/src/demo_ask_sta.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/src/demo_ask_sta.cpp
 ros/ros.h
 -
 std_msgs/String.h
@@ -56,7 +56,7 @@ sstream
 cstdlib
 -
 tm_msgs/AskSta.h
-/home/giacomo/git_workspace/src/tmr_ros1/demo/src/tm_msgs/AskSta.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/src/tm_msgs/AskSta.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

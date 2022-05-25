@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/src
+CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/omron_test_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
+CMAKE_BINARY_DIR = /home/giacomo/git_workspace/omron_test_ws/build
 
 # Include any dependencies generated for this target.
 include tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/depend.make
@@ -57,22 +57,22 @@ include tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/progress.make
 # Include the compile flags for this target's objects.
 include tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/flags.make
 
-tmr_ros1/ui_for_debug_and_demo/ui_tm_ros_driver_windows.h: /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_tm_ros_driver_windows.h"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/lib/qt5/bin/uic -o /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/ui_tm_ros_driver_windows.h /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.ui
+tmr_ros1/ui_for_debug_and_demo/ui_tm_ros_driver_windows.h: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_tm_ros_driver_windows.h"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/lib/qt5/bin/uic -o /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/ui_tm_ros_driver_windows.h /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.ui
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/flags.make
-tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o: /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/main.cpp.o -c /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
+tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/main.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_ui.dir/src/main.cpp.i"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp > CMakeFiles/robot_ui.dir/src/main.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp > CMakeFiles/robot_ui.dir/src/main.cpp.i
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_ui.dir/src/main.cpp.s"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp -o CMakeFiles/robot_ui.dir/src/main.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp -o CMakeFiles/robot_ui.dir/src/main.cpp.s
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o.requires:
 
@@ -86,17 +86,17 @@ tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o.provides.b
 
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/flags.make
-tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o: /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/ros_page.cpp.o -c /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
+tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/ros_page.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_ui.dir/src/ros_page.cpp.i"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp > CMakeFiles/robot_ui.dir/src/ros_page.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp > CMakeFiles/robot_ui.dir/src/ros_page.cpp.i
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_ui.dir/src/ros_page.cpp.s"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp -o CMakeFiles/robot_ui.dir/src/ros_page.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp -o CMakeFiles/robot_ui.dir/src/ros_page.cpp.s
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o.requires:
 
@@ -110,17 +110,17 @@ tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o.provid
 
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/flags.make
-tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o: /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o -c /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
+tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.i"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp > CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp > CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.i
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.s"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp -o CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp -o CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.s
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o.requires:
 
@@ -135,16 +135,16 @@ tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/flags.make
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o: tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o -c /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.i"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp > CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp > CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.i
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.s"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp -o CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp -o CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.s
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o.requires:
 
@@ -167,46 +167,46 @@ robot_ui_OBJECTS = \
 # External object files for target robot_ui
 robot_ui_EXTERNAL_OBJECTS =
 
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/build.make
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf2_ros.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libactionlib.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libmessage_filters.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libroscpp.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf2.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librostime.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libcpp_common.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
-/home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_ui.dir/link.txt --verbose=$(VERBOSE)
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/main.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/ros_page.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/src/tm_ros_driver_windows.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/robot_ui_autogen/mocs_compilation.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/build.make
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf2_ros.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libactionlib.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libmessage_filters.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libroscpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libtf2.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/librostime.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /opt/ros/melodic/lib/libcpp_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robot_ui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/build: /home/giacomo/git_workspace/devel/lib/ui_for_debug_and_demo/robot_ui
+tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/build: /home/giacomo/git_workspace/omron_test_ws/devel/lib/ui_for_debug_and_demo/robot_ui
 
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/build
 
@@ -218,10 +218,10 @@ tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/requires: tmr_ros1/ui_for
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/requires
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/clean:
-	cd /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -P CMakeFiles/robot_ui.dir/cmake_clean.cmake
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo && $(CMAKE_COMMAND) -P CMakeFiles/robot_ui.dir/cmake_clean.cmake
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/clean
 
 tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/depend: tmr_ros1/ui_for_debug_and_demo/ui_tm_ros_driver_windows.h
-	cd /home/giacomo/git_workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/src /home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/build /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giacomo/git_workspace/omron_test_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/omron_test_ws/src /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/omron_test_ws/build /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui.dir/depend
 

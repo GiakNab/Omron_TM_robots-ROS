@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/demo_set_io.dir/src/demo_set_io.cpp.o"
-  "/home/giacomo/git_workspace/devel/lib/demo/demo_set_io.pdb"
-  "/home/giacomo/git_workspace/devel/lib/demo/demo_set_io"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_set_io.pdb"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_set_io"
 )
 
 # Per-language clean rules from dependency scanning.

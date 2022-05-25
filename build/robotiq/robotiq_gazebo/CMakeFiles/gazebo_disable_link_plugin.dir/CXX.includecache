@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/include/robotiq_gazebo/disable_link_plugin.h
+/home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/include/robotiq_gazebo/disable_link_plugin.h
 ros/ros.h
 -
 boost/bind.hpp
@@ -20,7 +20,7 @@ gazebo/physics/physics.hh
 gazebo/common/common.hh
 -
 
-/home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/disable_link_plugin.cpp
 robotiq_gazebo/disable_link_plugin.h
 -
 
