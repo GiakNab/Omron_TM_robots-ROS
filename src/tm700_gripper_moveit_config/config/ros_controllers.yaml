@@ -39,4 +39,57 @@ controller_list:
     default: True
     type: FollowJointTrajectory
     joints:
-      robotiq_85_left_knuckle_joint
+      - robotiq_85_left_knuckle_joint
+
+tm_arm_controller:  
+  type:
+  joints:
+    - shoulder_1_joints
+    - shoulder_2_joints
+    - elbow_1_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+  gains: 
+    shoulder_1_joints:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+    shoulder_2_joints:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+    elbow_1_joint:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+    wrist_1_joint:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+    wrist_2_joint:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+    wrist_3_joint:
+      p: 1000
+      d: 50
+      i: 10
+      i_clamp: 100
+
+gripper_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints:
+    - robotiq_85_left_knuckle_joint
+  gains:
+    robotiq_85_left_knuckle_joint
+      p: 40
+      d: 0
+      i: 1
+      i_clamp: 1
+      

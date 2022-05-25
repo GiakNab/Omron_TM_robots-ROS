@@ -1,0 +1,20 @@
+controller_manager_ns: 'tm700_robotiq'
+controller_list:
+  - name: tm700_robotiq/tm_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FLowwJointTrajectory
+    default: True 
+    joints: 
+      - shoulder_1_joint
+      - shoulder_2_joint
+      - elbow_1_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+
+  - name: tm700_robotiq/gripper_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - robotiq_85_left_knuckle_joint
