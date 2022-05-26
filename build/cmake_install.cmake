@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/giacomo/git_workspace/omron_test_ws/build/gtest/cmake_install.cmake")
   include("/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm12_description/cmake_install.cmake")
+  include("/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm5_700_gripper_description/cmake_install.cmake")
   include("/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm5_description/cmake_install.cmake")
   include("/home/giacomo/git_workspace/omron_test_ws/build/tm700_gripper_moveit_config/cmake_install.cmake")
   include("/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_description/cmake_install.cmake")

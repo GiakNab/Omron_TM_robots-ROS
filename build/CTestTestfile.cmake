@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("tmr_ros1/tm12_description")
+subdirs("tmr_ros1/tm5_700_gripper_description")
 subdirs("tmr_ros1/tm5_description")
 subdirs("tm700_gripper_moveit_config")
 subdirs("tmr_ros1/tm_description")

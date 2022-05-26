@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="limited" default="false"/>
-  <arg name="eih" default="false"/>
+  <!-- <arg name="limited" default="false"/>
+  <arg name="eih" default="false"/> -->
   <arg name="paused" default="false"/>
   <arg name="gui" default="true"/>
   
@@ -13,9 +13,9 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <include file="$(find tm_description)/launch/tm700_robotique2f_upload.launch">
-    <arg name="eih" value="$(arg eih)"/>
-    <arg name="limited" value="$(arg limited)"/>
+  <include file="$(find tm5_700_gripper_description)/launch/tm5_700_robotiq_upload.launch">
+    <!-- <arg name="eih" value="$(arg eih)"/>
+    <arg name="limited" value="$(arg limited)"/> -->
   </include>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
