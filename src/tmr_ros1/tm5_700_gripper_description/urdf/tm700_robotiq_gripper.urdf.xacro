@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<robot name="tm700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="tm5_700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
   <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm5_700_robot.urdf.xacro" />
   <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro" />
 

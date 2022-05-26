@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="tm5_700" >
 
   <!-- perche' NON FUNZIONA? <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" /> -->
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <xacro:arg name="stl_mesh" default="false" />
 
   <!-- common stuff -->
@@ -11,7 +12,14 @@
   <xacro:include filename="$(find tm5_description)/urdf/tm5_700.urdf.xacro" />
 
   <!-- arm -->
-  <xacro:tm5_700_robot prefix="" joint_limited="false" stl_mesh="$(arg stl_mesh)" transmission_hw_interface="$(arg transmission_hw_interface)" />
+  <xacro:tm5_700_robot prefix="" joint_limited="false" stl_mesh="$(arg stl_mesh)"
+   shoulder_1_lower_limit="${-1.5*pi}"    shoulder_1_upper_limit="${1.5*pi}"
+   shoulder_2_lower_limit="${-pi}"        shoulder_2_upper_limit="${pi}"
+   elbow_lower_limit="${-pi}"             elbow_upper_limit="${pi}"
+   wrist_1_lower_limit="${-pi}"           wrist_1_upper_limit="${pi}"
+   wrist_2_lower_limit="${-pi}"           wrist_2_upper_limit="${pi}"
+   wrist_3_lower_limit="${-1.5*pi}"       wrist_3_upper_limit="${1.5*pi}"
+   transmission_hw_interface="$(arg transmission_hw_interface)" />
 
   <link name="world" />
   <joint name="world_joint" type="fixed">
