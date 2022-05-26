@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: tm5_700_gripper_description
+    relative_path: urdf/tm700_robotiq_gripper.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/tm700_robotiq.srdf
+  CONFIG:
+    author_name: GiacomoNabissi
+    author_email: giacomo.nabissi@gmail.com
+    generated_timestamp: 1653556850
