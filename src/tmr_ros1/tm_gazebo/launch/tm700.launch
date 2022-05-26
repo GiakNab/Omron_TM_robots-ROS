@@ -23,7 +23,7 @@
 
   <include file="$(find tm_gazebo)/launch/controller_utils.launch"/>
 
-  <rosparam file="$(find tm_gazebo)/controller/arm_controller2_tm.yaml" command="load"/>
+  <rosparam file="$(find tm_gazebo)/controller/arm_controller_tm.yaml" command="load"/>
   <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" args="arm_controller" output="screen"/> 
 
   <!-- <rosparam file="$(find tm5_700_gripper_moveit_config)/config/ros_controllers2.yaml" command="load"/>

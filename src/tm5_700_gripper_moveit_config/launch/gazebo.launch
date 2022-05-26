@@ -2,8 +2,12 @@
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
+  <arg name="limited" default="false"/>
+  <arg name="stl_mesh" default="false" />
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <arg name="urdf_path" default="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro"/>
 
+  
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="worlds/empty.world"/>
@@ -12,12 +16,22 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" textfile="$(arg urdf_path)" />
+  <param unless="$(arg limited)" name="robot_description" command="$(find xacro)/xacro.py $(arg urdf_path)
+  stl_mesh:=$(arg stl_mesh) transmission_hw_interface:=$(arg transmission_hw_interface) " />
 
-  <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700_robotiq" respawn="false" output="screen" />
+
+ <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
+  <include file="$(find tm_gazebo)/launch/controller_utils.launch"/>
+
+  <rosparam file="$(find tm700_gripper_moveit_config)/config/ros_controllers.yaml" command="load"/>
+  <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" args="tm5_700_arm_controller gripper_controller" output="screen"/>
+
+  <!-- BEFORE  push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn
+   in a different position 
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0.1"
     respawn="false" output="screen" />
 
   <include file="$(find tm5_700_gripper_moveit_config)/launch/ros_controllers.launch"/>
-
+  -->
 </launch>
