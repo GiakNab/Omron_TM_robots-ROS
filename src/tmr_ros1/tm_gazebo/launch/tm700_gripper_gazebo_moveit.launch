@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <launch>
 
-  <include file="$(find tm_gazebo)/launch/tm700.launch"/>
+  <include file="$(find tm_gazebo)/launch/tm700_gripper.launch"/>
   
   <!-- Remap joint_trajectory_action, send to gazebo ros controller -->
   <remap from="/joint_trajectory_action" to="/tm5_700_arm_controller/follow_joint_trajectory"/>
   
-  <include file="$(find tm700_moveit_config)/launch/move_group.launch">
+  <include file="$(find tm5_700_moveit_config)/launch/move_group.launch">
     <arg name="publish_monitored_planning_scene" value="true" />
   </include>
   
-  <include file="$(find tm700_moveit_config)/launch/moveit_rviz.launch">
-    <arg name="config" value="true"/>
+  <include file="$(find tm5_700_gripper_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="rviz_config" value="true"/>
   </include>
   
 </launch>
