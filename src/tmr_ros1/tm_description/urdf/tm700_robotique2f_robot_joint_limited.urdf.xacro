@@ -1,16 +1,18 @@
 <?xml version="1.0"?>
-<robot name="tm700" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="tm700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/EffortJointInterface"/>
+  
   <xacro:property name="prefix" value="" />
 
   <!-- gazebo stuff -->
   <xacro:include filename="$(find tm_description)/urdf/common.gazebo.xacro" />
-  <xacro:include filename="$(find tm_description)/urdf/tm.gazebo.xacro" />
+  <!-- <xacro:include filename="$(find tm_description)/urdf/tm.gazebo.xacro" /> -->
   <xacro:tm_arm_gazebo prefix="${prefix}" />
 
   <!-- tm700 -->
   <xacro:include filename="$(find tm_description)/urdf/tm700_robotique2f_gripper.urdf.xacro" />
-  <xacro:tm700_robot prefix="${prefix}" joint_limited="true" />
+  <xacro:tm700_robot prefix="${prefix}" joint_limited="true"  transmission_hw_interface="$(arg transmission_hw_interface)"/>
 
   <link name="world" />
   <joint name="world_joint" type="fixed">

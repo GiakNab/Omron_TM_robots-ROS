@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="limited" default="false"/>
-  <arg name="eih" default="true"/>
+  <!-- <arg name="limited" default="false"/>
+  <arg name="eih" default="true"/> -->
   <arg name="paused" default="false"/>
   <arg name="gui" default="true"/>
   
@@ -13,9 +13,9 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <include file="$(find tm_description)/launch/tm700_upload.launch">
-    <arg name="eih" value="$(arg eih)"/>
-    <arg name="limited" value="$(arg limited)"/>
+  <include file="$(find tm5_description)/launch/tm5_700_upload.launch">
+    <!-- <arg name="eih" value="$(arg eih)"/>
+    <arg name="limited" value="$(arg limited)"/> -->
   </include>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
@@ -23,7 +23,7 @@
 
   <include file="$(find tm_gazebo)/launch/controller_utils.launch"/>
 
-  <rosparam file="$(find tm_gazebo)/controller/arm_controller_tm.yaml" command="load"/>
+  <rosparam file="$(find tm_gazebo)/controller/arm_controller2_tm.yaml" command="load"/>
   <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" args="arm_controller" output="screen"/>
 
 </launch>
