@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="tm700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="tm5_700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
   
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <xacro:arg name="stl_mesh" default="false" />
@@ -10,14 +10,12 @@
 
   <!-- tm700 + 2f gripper -->
   <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro" />
-  <xacro:tm5_700_robotiq prefix="" joint_limited="false" stl_mesh="$(arg stl_mesh)"
-   transmission_hw_interface="$(arg transmission_hw_interface)" />
-
-  <link name="world" />
+  
+  <!-- <link name="world" />
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link="base" />
     <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
+  </joint> -->
 
 </robot>

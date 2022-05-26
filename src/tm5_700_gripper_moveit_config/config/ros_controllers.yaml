@@ -42,7 +42,7 @@ controller_list:
        - robotiq_85_left_knuckle_joint
 
 tm5_700_arm_controller:  
-  type: effort_controllers/JointTrajectoryController
+  type: position_controllers/JointTrajectoryController
   joints:
     - shoulder_1_joint
     - shoulder_2_joint

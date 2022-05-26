@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="stl_mesh" default="false" />
-  <arg name="transmission_hw_interface" default="hardware_interface/EffortJointInterface" />
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <arg name="limited" default="false"/>
 
   <param unless="$(arg limited)" name="robot_description" command="$(find xacro)/xacro.py '$(find tm5_700_gripper_description)/urdf/tm700_robotiq_robot.urdf.xacro' 
