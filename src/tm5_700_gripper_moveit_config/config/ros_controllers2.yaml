@@ -19,11 +19,64 @@ hardware_interface:
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
-joint_state_controller:
-  type: joint_state_controller/JointStateController
-  publish_rate: 50
+tm5_700_robotiq:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  tm5_700_arm_controller:  
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - shoulder_1_joint
+      - shoulder_2_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    gains: 
+      shoulder_1_joints:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+      shoulder_2_joints:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+      elbow_1_joint:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+      wrist_1_joint:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+      wrist_2_joint:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+      wrist_3_joint:
+        p: 1000
+        d: 50
+        i: 10
+        i_clamp: 100
+
+  gripper_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - robotiq_85_left_knuckle_joint
+    gains:
+      robotiq_85_left_knuckle_joint:
+        p: 40
+        d: 0
+        i: 1
+        i_clamp: 1
+      
 controller_list:
-  - name: tm5_700_arm_controller
+  - name: tm5_700_robotiq/tm5_700_arm_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
@@ -34,44 +87,10 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
+  - name: tm5_700_robotiq/gripper_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+       - robotiq_85_left_knuckle_joint
 
-tm5_700_arm_controller:  
-  type: effort_controllers/JointTrajectoryController
-  joints:
-    - shoulder_1_joint
-    - shoulder_2_joint
-    - elbow_joint
-    - wrist_1_joint
-    - wrist_2_joint
-    - wrist_3_joint
-  gains: 
-    shoulder_1_joints:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100
-    shoulder_2_joints:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100
-    elbow_1_joint:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100
-    wrist_1_joint:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100
-    wrist_2_joint:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100
-    wrist_3_joint:
-      p: 1000
-      d: 50
-      i: 10
-      i_clamp: 100

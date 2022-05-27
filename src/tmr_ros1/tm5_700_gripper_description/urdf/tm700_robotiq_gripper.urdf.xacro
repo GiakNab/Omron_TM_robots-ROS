@@ -52,7 +52,7 @@
       <updateRate>250.0</updateRate>
       <topicName>ft_sensor/raw</topicName>
       <gaussianNoise>0.0</gaussianNoise>
-      <jointName>j6</jointName>
+      <jointName>wrist_3_joint</jointName>
     </plugin>
   </gazebo>
   
