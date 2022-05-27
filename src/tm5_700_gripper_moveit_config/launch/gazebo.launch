@@ -22,16 +22,9 @@
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700_robotiq" respawn="false" output="screen" />
 
  <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
-  <include file="$(find tm_gazebo)/launch/controller_utils.launch"/>
+  <include file="$(find tm5_700_gripper_moveit_config)/launch/ros_controllers2.launch"/>
 
   <rosparam file="$(find tm5_700_gripper_moveit_config)/config/ros_controllers.yaml" command="load"/>
   <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" args="tm5_700_arm_controller gripper_controller" output="screen"/>
 
-  <!-- BEFORE  push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn
-   in a different position 
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0.1"
-    respawn="false" output="screen" />
-
-  <include file="$(find tm5_700_gripper_moveit_config)/launch/ros_controllers.launch"/>
-  -->
 </launch>
