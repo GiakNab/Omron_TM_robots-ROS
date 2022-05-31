@@ -3,6 +3,7 @@
 
   <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm5_700_robot.urdf.xacro" />
   <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+  <xacro:include filename="$(find tm5_700_gripper_description)/urdf/common.gazebo.xacro" /> 
 
   <!-- Robotiq Coupler -->
   <!-- The height added by this coupler is 8mm -->

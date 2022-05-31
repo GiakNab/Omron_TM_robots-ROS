@@ -19,7 +19,7 @@
   <param unless="$(arg limited)" name="robot_description" command="$(find xacro)/xacro.py $(arg urdf_path)
   stl_mesh:=$(arg stl_mesh) transmission_hw_interface:=$(arg transmission_hw_interface) " />
 
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm700_robotiq" respawn="false" output="screen" />
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model tm5_700_robotiq" respawn="false" output="screen" />
 
  <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
   <include file="$(find tm5_700_gripper_moveit_config)/launch/ros_controllers2.launch"/>

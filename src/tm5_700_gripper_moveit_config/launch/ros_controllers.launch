@@ -5,7 +5,11 @@
   <rosparam file="$(find tm5_700_gripper_moveit_config)/config/ros_controllers.yaml" command="load"/>
 
   <!-- Load the controllers -->
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="tm5_700_arm_controller gripper_controller joint_state_controller"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" ns="/tm5_700_robotiq" output="screen"
+   args="--namespace=/tm5_700_robotiq 
+   joint_state_controller 
+   tm5_700_arm_controller 
+   gripper_controller 
+   --timeout 20"/>
 
 </launch>
