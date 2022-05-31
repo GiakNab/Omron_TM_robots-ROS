@@ -19,7 +19,7 @@
   It also provides a GUI to move the simulated robot around "manually".
   This corresponds to moving around the real robot without the use of MoveIt.
   -->
-  <arg name="use_gui" default="true" />
+  <arg name="use_gui" default="false" />
 
   <!-- Gazebo specific options -->
   <arg name="gazebo_gui" default="true"/>
@@ -40,14 +40,13 @@
   <!-- We do not have a robot connected, so publish fake joint states -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
   <param name="use_gui" value="$(arg use_gui)" />
-  <!--  <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam> -->
+  <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam> 
   <rosparam param="source_list">[tm5_700_robotiq/joint_states]</rosparam>
   </node>
 
   <!-- Given the published joint states, publish tf for the robot links -->
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-    <param name="publish_frequency" type="double" value="50.0" />
-    <param name="tf_prefix" type="string" value="" />
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" ns="/tm5_700_robotiq" respawn="true" output="screen">
+  <param name="tf_prefix" type="string" value="tm5_700_robotiq" />
   </node>
 
   <!-- Run the main MoveIt! executable without trajectory execution (we do not have controllers configured by default) -->

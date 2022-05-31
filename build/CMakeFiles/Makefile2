@@ -509,22 +509,22 @@ tmr_ros1/tm5_description/preinstall:
 .PHONY : tmr_ros1/tm5_description/preinstall
 
 #=============================================================================
-# Directory level rules for directory tmr_ros1/tm_description
+# Directory level rules for directory tmr_ros1/tm700_moveit_config
 
 # Convenience name for "all" pass in the directory.
-tmr_ros1/tm_description/all:
+tmr_ros1/tm700_moveit_config/all:
 
-.PHONY : tmr_ros1/tm_description/all
+.PHONY : tmr_ros1/tm700_moveit_config/all
 
 # Convenience name for "clean" pass in the directory.
-tmr_ros1/tm_description/clean:
+tmr_ros1/tm700_moveit_config/clean:
 
-.PHONY : tmr_ros1/tm_description/clean
+.PHONY : tmr_ros1/tm700_moveit_config/clean
 
 # Convenience name for "preinstall" pass in the directory.
-tmr_ros1/tm_description/preinstall:
+tmr_ros1/tm700_moveit_config/preinstall:
 
-.PHONY : tmr_ros1/tm_description/preinstall
+.PHONY : tmr_ros1/tm700_moveit_config/preinstall
 
 #=============================================================================
 # Directory level rules for directory robotiq/robotiq_description
@@ -543,24 +543,6 @@ robotiq/robotiq_description/clean:
 robotiq/robotiq_description/preinstall:
 
 .PHONY : robotiq/robotiq_description/preinstall
-
-#=============================================================================
-# Directory level rules for directory tmr_ros1/tmr_description
-
-# Convenience name for "all" pass in the directory.
-tmr_ros1/tmr_description/all:
-
-.PHONY : tmr_ros1/tmr_description/all
-
-# Convenience name for "clean" pass in the directory.
-tmr_ros1/tmr_description/clean:
-
-.PHONY : tmr_ros1/tmr_description/clean
-
-# Convenience name for "preinstall" pass in the directory.
-tmr_ros1/tmr_description/preinstall:
-
-.PHONY : tmr_ros1/tmr_description/preinstall
 
 #=============================================================================
 # Directory level rules for directory robotiq/robotiq_gazebo
@@ -5328,24 +5310,6 @@ clean: tmr_ros1/ui_for_debug_and_demo/CMakeFiles/robot_ui_autogen.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory tmr_ros1/tm700_moveit_config
-
-# Convenience name for "all" pass in the directory.
-tmr_ros1/tm700_moveit_config/all:
-
-.PHONY : tmr_ros1/tm700_moveit_config/all
-
-# Convenience name for "clean" pass in the directory.
-tmr_ros1/tm700_moveit_config/clean:
-
-.PHONY : tmr_ros1/tm700_moveit_config/clean
-
-# Convenience name for "preinstall" pass in the directory.
-tmr_ros1/tm700_moveit_config/preinstall:
-
-.PHONY : tmr_ros1/tm700_moveit_config/preinstall
-
-#=============================================================================
 # Directory level rules for directory tmr_ros1/tm12_moveit_config
 
 # Convenience name for "all" pass in the directory.
@@ -5452,24 +5416,6 @@ tmr_ros1/tm5_900_nonvision_moveit_config/clean:
 tmr_ros1/tm5_900_nonvision_moveit_config/preinstall:
 
 .PHONY : tmr_ros1/tm5_900_nonvision_moveit_config/preinstall
-
-#=============================================================================
-# Directory level rules for directory tmr_ros1/tm_gazebo
-
-# Convenience name for "all" pass in the directory.
-tmr_ros1/tm_gazebo/all:
-
-.PHONY : tmr_ros1/tm_gazebo/all
-
-# Convenience name for "clean" pass in the directory.
-tmr_ros1/tm_gazebo/clean:
-
-.PHONY : tmr_ros1/tm_gazebo/clean
-
-# Convenience name for "preinstall" pass in the directory.
-tmr_ros1/tm_gazebo/preinstall:
-
-.PHONY : tmr_ros1/tm_gazebo/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.
