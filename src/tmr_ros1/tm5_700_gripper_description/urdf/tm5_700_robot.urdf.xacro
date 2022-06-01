@@ -6,10 +6,10 @@
   <xacro:arg name="stl_mesh" default="false" />
 
   <!-- common stuff -->
-  <xacro:include filename="$(find tm5_description)/urdf/common.gazebo.xacro" />
+  <!--<xacro:include filename="$(find tm5_description)/urdf/common.gazebo.xacro" />-->
 
   <!-- tm5_700 -->
-  <xacro:include filename="$(find tm5_description)/urdf/tm5_700.urdf.xacro" />
+  <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm5_700.urdf.xacro" />
 
   <!-- arm -->
   <xacro:tm5_700_robot prefix="" joint_limited="false" stl_mesh="$(arg stl_mesh)"
@@ -21,11 +21,11 @@
    wrist_3_lower_limit="${-1.5*pi}"       wrist_3_upper_limit="${1.5*pi}"
    transmission_hw_interface="$(arg transmission_hw_interface)" />
 
-  <link name="world" />
+ <!--  <link name="world" />
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link="base" />
     <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
+  </joint> -->
 
 </robot>

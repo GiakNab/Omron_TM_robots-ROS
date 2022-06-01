@@ -11,11 +11,11 @@
   <!-- tm700 + 2f gripper -->
   <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro" />
   
-  <!-- <link name="world" />
+  <link name="world" />
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link="base" />
     <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint> -->
+  </joint> 
 
 </robot>
