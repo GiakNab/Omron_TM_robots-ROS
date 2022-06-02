@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "python_move_interface")
 set(python_move_interface_VERSION "0.0.0")
-set(python_move_interface_MAINTAINER "giacomo <giacomo@todo.todo>")
+set(python_move_interface_MAINTAINER "giacomo <giacomo.nabissi@gmail.com>")
 set(python_move_interface_PACKAGE_FORMAT "2")
 set(python_move_interface_BUILD_DEPENDS "rospy" "std_msgs")
 set(python_move_interface_BUILD_EXPORT_DEPENDS "rospy" "std_msgs")
