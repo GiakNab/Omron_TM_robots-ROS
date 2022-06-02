@@ -876,6 +876,12 @@ message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
 
+//Value Computed by CMake
+python_move_interface_BINARY_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/build/python_move_interface
+
+//Value Computed by CMake
+python_move_interface_SOURCE_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/src/python_move_interface
+
 //The directory containing a CMake configuration file for realtime_tools.
 realtime_tools_DIR:PATH=/opt/ros/melodic/share/realtime_tools/cmake
 
@@ -1399,7 +1405,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
