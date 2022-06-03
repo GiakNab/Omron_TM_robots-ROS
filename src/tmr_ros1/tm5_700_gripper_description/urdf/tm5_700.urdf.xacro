@@ -338,8 +338,8 @@
     <!-- ROS base to TM 'base_link' Coordinates transform -->
     <link name="${prefix}base" />
     <joint name="${prefix}base-base_link" type="fixed">
-      <parent link="${prefix}base" />
-      <child link="${prefix}base_link" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}base" />
       <origin xyz="0 0 0" rpy="${0.5 * pi} 0 0" /> <!-- Note: 0.5 * pi -->
     </joint>
 
