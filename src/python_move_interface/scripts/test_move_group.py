@@ -31,11 +31,7 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-#
-# Author: Acorn Pooley, Mike Lautman
 
-## BEGIN_SUB_TUTORIAL imports
-##
 ## To use the Python MoveIt interfaces, we will import the `moveit_commander`_ namespace.
 ## This namespace provides us with a `MoveGroupCommander`_ class, a `PlanningSceneInterface`_ class,
 ## and a `RobotCommander`_ class. More on these below. We also import `rospy`_ and some messages that we will use:
@@ -55,6 +51,7 @@ from moveit_commander.conversions import pose_to_list
 
 def all_close(goal, actual, tolerance):
   """
+  This function is used to check the difference within two string, to check if the robot achieve the goal position.
   Convenience method for testing if a list of values are within a tolerance of their counterparts in another list
   @param: goal       A list of floats, a Pose or a PoseStamped
   @param: actual     A list of floats, a Pose or a PoseStamped
@@ -98,12 +95,14 @@ class MoveGroupPythonIntefaceTutorial(object):
 
     ## Instantiate a `MoveGroupCommander`_ object.  This object is an interface
     ## to a planning group (group of joints).  In this tutorial the group is the primary
-    ## arm joints in the Panda robot, so we set the group's name to "panda_arm".
+    ## arm joints in the Tm5-700 robot, so we set the group's name to "tm5_700_arm".
     ## If you are using a different robot, change this value to the name of your robot
     ## arm planning group.
     ## This interface can be used to plan and execute motions:
     group_name = "tm5_700_arm"
     move_group = moveit_commander.MoveGroupCommander(group_name)
+    group_name2 = "gripper"
+    move_group2 = moveit_commander.MoveGroupCommander(group_name2)
 
     ## Create a `DisplayTrajectory`_ ROS publisher which is used to display
     ## trajectories in Rviz:
@@ -141,6 +140,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     self.robot = robot
     self.scene = scene
     self.move_group = move_group
+    self.move_group2 = move_group2
     self.display_trajectory_publisher = display_trajectory_publisher
     self.planning_frame = planning_frame
     self.eef_link = eef_link
@@ -162,12 +162,11 @@ class MoveGroupPythonIntefaceTutorial(object):
     # We can get the joint values from the group and adjust some of the values:
     joint_goal = move_group.get_current_joint_values()
     joint_goal[0] = 0
-    joint_goal[1] = -pi/4
-    joint_goal[2] = 0
-    joint_goal[3] = -pi/2
-    joint_goal[4] = 0
-    joint_goal[5] = pi/3
-    #joint_goal[6] = 0
+    joint_goal[1] = 0
+    joint_goal[2] = -pi/2
+    joint_goal[3] = 0
+    joint_goal[4] = -pi/2
+    joint_goal[5] = 0
 
     # The go command can be called with joint values, poses, or without any
     # parameters if you have already set the pose or joint target for the group
@@ -197,9 +196,9 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## end-effector:
     pose_goal = geometry_msgs.msg.Pose()
     pose_goal.orientation.w = 1.0
-    pose_goal.position.x = 0.4
-    pose_goal.position.y = 0.1
-    pose_goal.position.z = 0.4
+    pose_goal.position.x = 0.2
+    pose_goal.position.y = 0.2
+    pose_goal.position.z = 0.5
 
     move_group.set_pose_target(pose_goal)
 
@@ -364,11 +363,12 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     ## First, we will create a box in the planning scene at the location of the left finger:
     box_pose = geometry_msgs.msg.PoseStamped()
-    box_pose.header.frame_id = "robotiq_85_left_finger_link"
-    box_pose.pose.orientation.w = 1.0
-    box_pose.pose.position.z = 0.07 # slightly above the end effector
+    box_pose.header.frame_id = "robotiq_85_left_finger_tip_link"
+    #box_pose.pose.orientation.w = 1.0
+    box_pose.pose.position.x = 0.05 # slightly above the end effector
+    box_pose.pose.position.y = 0.07 # slightly above the end effector
     box_name = "box"
-    scene.add_box(box_name, box_pose, size=(0.1, 0.1, 0.1))
+    scene.add_box(box_name, box_pose, size=(0.05, 0.05, 0.05))
 
     ## END_SUB_TUTORIAL
     # Copy local variables back to class variables. In practice, you should use the class
@@ -447,15 +447,27 @@ class MoveGroupPythonIntefaceTutorial(object):
     return self.wait_for_state_update(box_is_attached=False, box_is_known=False, timeout=timeout)
 
 
+  def close_gripper(self):
+    move_group2 = self.move_group2
+
+    joint_goal2 = move_group2.get_current_joint_values()
+    joint_goal2[0] = 0.5  #close of 20
+
+    move_group2.go(joint_goal2, wait=True)
+
+    move_group2.stop()
+
+    # For testing:
+    current_joints2 = move_group2.get_current_joint_values()
+    return all_close(joint_goal2, current_joints2, 0.01)
+
+
 def main():
-  try:
+  try:   
     print ("")
-    print ("----------------------------------------------------------")
-    print ("Welcome to the MoveIt MoveGroup Python Interface Tutorial")
-    print ("----------------------------------------------------------")
     print ("Press Ctrl-D to exit at any time")
     print ("")
-    print ("============ Press `Enter` to begin the tutorial by setting up the moveit_commander ...")
+    print ("============ Press `Enter` to begin")
     raw_input()
     tutorial = MoveGroupPythonIntefaceTutorial()
 
@@ -483,16 +495,20 @@ def main():
     raw_input()
     tutorial.add_box()
 
-    print ("============ Press `Enter` to attach a Box to the Panda robot ...")
+    print ("============ Press `Enter` to attach a Box to the TM robot ...")
     raw_input()
     tutorial.attach_box()
+
+    print ("============ Press `Enter` to close the gripper")
+    raw_input()
+    tutorial.close_gripper()
 
     print ("============ Press `Enter` to plan and execute a path with an attached collision object ...")
     raw_input()
     cartesian_plan, fraction = tutorial.plan_cartesian_path(scale=-1)
     tutorial.execute_plan(cartesian_plan)
 
-    print ("============ Press `Enter` to detach the box from the Panda robot ...")
+    print ("============ Press `Enter` to detach the box from the TM robot ...")
     raw_input()
     tutorial.detach_box()
 

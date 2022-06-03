@@ -10,7 +10,6 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
-        - /MotionPlanning1/Planned Path1/Links1
       Splitter Ratio: 0.7425600290298462
     Tree Height: 158
   - Class: rviz/Help
@@ -73,7 +72,7 @@ Visualization Manager:
         Color Enabled: false
         Interrupt Display: false
         Links:
-          All Links Enabled: false
+          All Links Enabled: true
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
@@ -105,7 +104,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           robotiq_85_left_finger_link:
             Alpha: 1
             Show Axes: false
@@ -179,7 +178,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.30000001192092896
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -201,7 +200,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: tm5_700_arm
+        Planning Group: gripper
         Query Goal State: false
         Query Start State: false
         Show Workspace: false
@@ -346,7 +345,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.514013409614563
+      Distance: 1.2660977840423584
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -361,10 +360,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5347971320152283
+      Pitch: 0.8297972679138184
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.5617636442184448
+      Yaw: 4.564949035644531
     Saved: ~
 Window Geometry:
   Displays:
@@ -382,5 +381,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1389
-  X: 531
-  Y: 47
+  X: 460
+  Y: 27
