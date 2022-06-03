@@ -491,6 +491,24 @@ tm5_700_gripper_moveit_config/preinstall:
 .PHONY : tm5_700_gripper_moveit_config/preinstall
 
 #=============================================================================
+# Directory level rules for directory tm5_700_gripper_new_moveit_config
+
+# Convenience name for "all" pass in the directory.
+tm5_700_gripper_new_moveit_config/all:
+
+.PHONY : tm5_700_gripper_new_moveit_config/all
+
+# Convenience name for "clean" pass in the directory.
+tm5_700_gripper_new_moveit_config/clean:
+
+.PHONY : tm5_700_gripper_new_moveit_config/clean
+
+# Convenience name for "preinstall" pass in the directory.
+tm5_700_gripper_new_moveit_config/preinstall:
+
+.PHONY : tm5_700_gripper_new_moveit_config/preinstall
+
+#=============================================================================
 # Directory level rules for directory tmr_ros1/tm5_description
 
 # Convenience name for "all" pass in the directory.

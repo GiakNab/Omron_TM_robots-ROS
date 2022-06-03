@@ -982,6 +982,12 @@ tm5_700_gripper_moveit_config_BINARY_DIR:STATIC=/home/giacomo/git_workspace/omro
 tm5_700_gripper_moveit_config_SOURCE_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_moveit_config
 
 //Value Computed by CMake
+tm5_700_gripper_new_moveit_config_BINARY_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/build/tm5_700_gripper_new_moveit_config
+
+//Value Computed by CMake
+tm5_700_gripper_new_moveit_config_SOURCE_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_new_moveit_config
+
+//Value Computed by CMake
 tm5_700_moveit_config_BINARY_DIR:STATIC=/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm5_700_moveit_config
 
 //Value Computed by CMake
@@ -1405,7 +1411,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
