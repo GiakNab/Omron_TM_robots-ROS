@@ -195,10 +195,13 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## We can plan a motion for this group to a desired pose for the
     ## end-effector:
     pose_goal = geometry_msgs.msg.Pose()
-    pose_goal.orientation.w = 1.0
+    pose_goal.orientation.x = 0.0
+    pose_goal.orientation.y = 0.0
+    pose_goal.orientation.z = 0.0
+    pose_goal.orientation.w = 0.5
     pose_goal.position.x = 0.2
-    pose_goal.position.y = 0.2
-    pose_goal.position.z = 0.5
+    pose_goal.position.y = -0.2
+    pose_goal.position.z = 0.3
 
     move_group.set_pose_target(pose_goal)
 
@@ -365,8 +368,8 @@ class MoveGroupPythonIntefaceTutorial(object):
     box_pose = geometry_msgs.msg.PoseStamped()
     box_pose.header.frame_id = "robotiq_85_left_finger_tip_link"
     #box_pose.pose.orientation.w = 1.0
-    box_pose.pose.position.x = 0.05 # slightly above the end effector
-    box_pose.pose.position.y = 0.07 # slightly above the end effector
+    box_pose.pose.position.x = 0.025 # slightly above the end effector
+    box_pose.pose.position.y = 0.05 # slightly above the end effector
     box_name = "box"
     scene.add_box(box_name, box_pose, size=(0.05, 0.05, 0.05))
 
@@ -451,7 +454,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     move_group2 = self.move_group2
 
     joint_goal2 = move_group2.get_current_joint_values()
-    joint_goal2[0] = 0.5  #close of 20
+    joint_goal2[0] = 0.35  #close of 20
 
     move_group2.go(joint_goal2, wait=True)
 
@@ -505,8 +508,9 @@ def main():
 
     print ("============ Press `Enter` to plan and execute a path with an attached collision object ...")
     raw_input()
-    cartesian_plan, fraction = tutorial.plan_cartesian_path(scale=-1)
-    tutorial.execute_plan(cartesian_plan)
+    #cartesian_plan, fraction = tutorial.plan_cartesian_path(scale=-1)
+    #tutorial.execute_plan(cartesian_plan)
+    tutorial.go_to_joint_state()
 
     print ("============ Press `Enter` to detach the box from the TM robot ...")
     raw_input()

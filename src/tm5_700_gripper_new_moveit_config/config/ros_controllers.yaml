@@ -19,7 +19,7 @@ hardware_interface:
   sim_control_mode: 1  # 0: position, 1: velocity
    
 controller_list:
-  - name: "tm5_700_robotiq/tm5_700_arm_controller"
+  - name: tm5_700_robotiq/tm5_700_arm_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
@@ -30,7 +30,7 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
-  - name: "tm5_700_robotiq/gripper_controller"
+  - name: tm5_700_robotiq/gripper_controller
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
