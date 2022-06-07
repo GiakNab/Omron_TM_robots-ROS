@@ -7,12 +7,12 @@
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}robotiq_85_left_knuckle_joint">
         <!-- <hardwareInterface>PositionJointInterface</hardwareInterface> -->
-        <hardwareInterface>EffortJointInterface</hardwareInterface> 
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface> 
       </joint>
       <actuator name="${prefix}robotiq_85_left_knuckle_motor">
         <mechanicalReduction>1</mechanicalReduction>
         <!-- <hardwareInterface>PositionJointInterface</hardwareInterface> -->
-        <hardwareInterface>EfforJointInterface</hardwareInterface> 
+        <hardwareInterface>hardware_interface/EfforJointInterface</hardwareInterface> 
       </actuator>
     </transmission>
     
