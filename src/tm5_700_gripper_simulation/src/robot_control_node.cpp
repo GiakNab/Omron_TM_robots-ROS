@@ -6,8 +6,9 @@
 #include <ros/ros.h>
 #include <boost/filesystem.hpp>
 
-static const std::string PLANNING_GROUP_ARM = "panda_arm";
-static const std::string APP_DIRECTORY_NAME = ".panda_simulation";
+static const std::string PLANNING_GROUP_ARM = "tm5_700_arm";
+static const std::string APP_DIRECTORY_NAME = "git_workspace/omron_test_ws/src/tm5_700_gripper_simulation";
+
 
 moveit_msgs::CollisionObject extractObstacleFromJson(Json::Value &root, std::string name)
 {
@@ -84,7 +85,7 @@ int main(int argc, char **argv)
 
       // Create .panda_simulation directory
       std::string path(getenv("HOME"));
-      path += "/.panda_simulation";
+      path += "/.tm5_700_gripper_simulation";
       ROS_INFO("Creating %s collision objects directory.", path);
       try
       {
