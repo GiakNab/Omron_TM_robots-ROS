@@ -4,12 +4,15 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planning Metrics1
         - /MotionPlanning1/Planned Path1
-      Splitter Ratio: 0.7425600290298462
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Frames1/flange_link1
+        - /TF1/Frames1/flange_link1/Orientation1
+      Splitter Ratio: 0.4389880895614624
     Tree Height: 158
   - Class: rviz/Help
     Name: Help
@@ -199,7 +202,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0.20000000298023224
         Joint Violation Color: 255; 0; 255
-        Planning Group: gripper
+        Planning Group: tm5_700_arm
         Query Goal State: false
         Query Start State: false
         Show Workspace: false
@@ -328,6 +331,87 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 0.5
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        arm_1_link:
+          Value: false
+        arm_2_link:
+          Value: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        flange_link:
+          Value: false
+        robotiq_85_base_link:
+          Value: false
+        robotiq_85_left_finger_link:
+          Value: false
+        robotiq_85_left_finger_tip_link:
+          Value: false
+        robotiq_85_left_inner_knuckle_link:
+          Value: false
+        robotiq_85_left_knuckle_link:
+          Value: false
+        robotiq_85_right_finger_link:
+          Value: false
+        robotiq_85_right_finger_tip_link:
+          Value: false
+        robotiq_85_right_inner_knuckle_link:
+          Value: false
+        robotiq_85_right_knuckle_link:
+          Value: false
+        robotiq_coupler:
+          Value: false
+        shoulder_1_link:
+          Value: false
+        tool0:
+          Value: false
+        world:
+          Value: true
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            base:
+              {}
+            shoulder_1_link:
+              arm_1_link:
+                arm_2_link:
+                  wrist_1_link:
+                    wrist_2_link:
+                      wrist_3_link:
+                        flange_link:
+                          tool0:
+                            robotiq_coupler:
+                              robotiq_85_base_link:
+                                robotiq_85_left_inner_knuckle_link:
+                                  robotiq_85_left_finger_tip_link:
+                                    {}
+                                robotiq_85_left_knuckle_link:
+                                  robotiq_85_left_finger_link:
+                                    {}
+                                robotiq_85_right_inner_knuckle_link:
+                                  robotiq_85_right_finger_tip_link:
+                                    {}
+                                robotiq_85_right_knuckle_link:
+                                  robotiq_85_right_finger_link:
+                                    {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -344,7 +428,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.996500015258789
+      Distance: 1.5361336469650269
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -359,10 +443,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.43979698419570923
+      Pitch: 0.17979678511619568
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.299951076507568
+      Yaw: 3.9353973865509033
     Saved: ~
 Window Geometry:
   Displays:
@@ -380,5 +464,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1389
-  X: 194
-  Y: 211
+  X: 545
+  Y: 27

@@ -1,42 +1,5 @@
 #!/usr/bin/env python
 
-# Software License Agreement (BSD License)
-#
-# Copyright (c) 2013, SRI International
-# All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-#  * Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-#  * Redistributions in binary form must reproduce the above
-#    copyright notice, this list of conditions and the following
-#    disclaimer in the documentation and/or other materials provided
-#    with the distribution.
-#  * Neither the name of SRI International nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
-
-## To use the Python MoveIt interfaces, we will import the `moveit_commander`_ namespace.
-## This namespace provides us with a `MoveGroupCommander`_ class, a `PlanningSceneInterface`_ class,
-## and a `RobotCommander`_ class. More on these below. We also import `rospy`_ and some messages that we will use:
-##
-
 import sys
 import copy
 import rospy
@@ -146,6 +109,16 @@ class MoveGroupPythonIntefaceTutorial(object):
     self.eef_link = eef_link
     self.group_names = group_names
 
+  def get_ee_pose(self):
+    move_group = self.move_group
+    current_pose = self.move_group.get_current_pose().pose
+    print("this is the current position of end-effector", current_pose.position)
+    print("this is the current orientation of end-effector", current_pose.orientation)
+
+  def joints_value(self):
+    move_group = self.move_group
+    joints_value = move_group.get_current_joint_values()
+    print("actual joints value:  ", joints_value)
 
   def go_to_joint_state(self):
     # Copy class variables to local variables to make the web tutorials more clear.
@@ -164,7 +137,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     joint_goal[0] = 0
     joint_goal[1] = 0
     joint_goal[2] = -pi/2
-    joint_goal[3] = 0
+    joint_goal[3] = pi/4
     joint_goal[4] = -pi/2
     joint_goal[5] = 0
 
@@ -182,7 +155,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_pose_goal(self):
+  def go_to_pose_goal(self, pose_goal):
     # Copy class variables to local variables to make the web tutorials more clear.
     # In practice, you should use the class variables directly unless you have a good
     # reason not to.
@@ -194,14 +167,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## ^^^^^^^^^^^^^^^^^^^^^^^
     ## We can plan a motion for this group to a desired pose for the
     ## end-effector:
-    pose_goal = geometry_msgs.msg.Pose()
-    pose_goal.orientation.x = 0.0
-    pose_goal.orientation.y = 0.0
-    pose_goal.orientation.z = 0.0
-    pose_goal.orientation.w = 0.5
-    pose_goal.position.x = 0.2
-    pose_goal.position.y = -0.2
-    pose_goal.position.z = 0.3
+    #pose_goal = geometry_msgs.msg.Pose()
 
     move_group.set_pose_target(pose_goal)
 
@@ -219,7 +185,8 @@ class MoveGroupPythonIntefaceTutorial(object):
     # Note that since this section of code will not be included in the tutorials
     # we use the class variable rather than the copied state variable
     current_pose = self.move_group.get_current_pose().pose
-    return all_close(pose_goal, current_pose, 0.01)
+    print("current pose, ", current_pose)
+    return all_close(pose_goal, current_pose, 0.2)
 
 
   def plan_cartesian_path(self, scale=1):
@@ -474,13 +441,24 @@ def main():
     raw_input()
     tutorial = MoveGroupPythonIntefaceTutorial()
 
+    tutorial.get_ee_pose()
+    tutorial.joints_value()
+
     print ("============ Press `Enter` to execute a movement using a joint state goal ...")
     raw_input()
     tutorial.go_to_joint_state()
 
     print ("============ Press `Enter` to execute a movement using a pose goal ...")
+    goal1= geometry_msgs.msg.Pose()
+    goal1.position.x = -0.21
+    goal1.position.y = -0.42
+    goal1.position.z = 0.36
+    goal1.orientation.x = -0.7070
+    goal1.orientation.y = 0.7070
+    goal1.orientation.z = 1.55e-5
+    goal1.orientation.w = 3.8e-5
     raw_input()
-    tutorial.go_to_pose_goal()
+    tutorial.go_to_pose_goal(goal1)
 
     print ("============ Press `Enter` to plan and display a Cartesian path ...")
     raw_input()
@@ -490,35 +468,40 @@ def main():
     raw_input()
     tutorial.display_trajectory(cartesian_plan)
 
-    print ("============ Press `Enter` to execute a saved path ...")
-    raw_input()
-    tutorial.execute_plan(cartesian_plan)
+    print ("============ Press `Y` to execute a saved path in loop...")
+    if raw_input("Enter you answer : ") == 'Y':
+      i=0
+      while i<6:
+        cartesian_plan, fraction = tutorial.plan_cartesian_path()
+        tutorial.execute_plan(cartesian_plan)
+        tutorial.go_to_joint_state()
+        i+=1
 
-    print ("============ Press `Enter` to add a box to the planning scene ...")
-    raw_input()
-    tutorial.add_box()
+#    print ("============ Press `Enter` to add a box to the planning scene ...")
+#    raw_input()
+#    tutorial.add_box()
 
-    print ("============ Press `Enter` to attach a Box to the TM robot ...")
-    raw_input()
-    tutorial.attach_box()
+#    print ("============ Press `Enter` to attach a Box to the TM robot ...")
+#    raw_input()
+#    tutorial.attach_box()
 
-    print ("============ Press `Enter` to close the gripper")
-    raw_input()
-    tutorial.close_gripper()
+#    print ("============ Press `Enter` to close the gripper")
+#    raw_input()
+#    tutorial.close_gripper()
 
-    print ("============ Press `Enter` to plan and execute a path with an attached collision object ...")
-    raw_input()
-    #cartesian_plan, fraction = tutorial.plan_cartesian_path(scale=-1)
-    #tutorial.execute_plan(cartesian_plan)
-    tutorial.go_to_joint_state()
+#   print ("============ Press `Enter` to plan and execute a path with an attached collision object ...")
+#    raw_input()
+#    cartesian_plan, fraction = tutorial.plan_cartesian_path(scale=-1)
+#    tutorial.execute_plan(cartesian_plan)
+#    tutorial.go_to_joint_state()
 
-    print ("============ Press `Enter` to detach the box from the TM robot ...")
-    raw_input()
-    tutorial.detach_box()
+#    print ("============ Press `Enter` to detach the box from the TM robot ...")
+#    raw_input()
+#    tutorial.detach_box()
 
-    print ("============ Press `Enter` to remove the box from the planning scene ...")
-    raw_input()
-    tutorial.remove_box()
+#    print ("============ Press `Enter` to remove the box from the planning scene ...")
+#    raw_input()
+#    tutorial.remove_box()
 
     print ("============ Python tutorial demo complete!")
   except rospy.ROSInterruptException:
@@ -528,39 +511,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-## BEGIN_TUTORIAL
-## .. _moveit_commander:
-##    http://docs.ros.org/melodic/api/moveit_commander/html/namespacemoveit__commander.html
-##
-## .. _MoveGroupCommander:
-##    http://docs.ros.org/melodic/api/moveit_commander/html/classmoveit__commander_1_1move__group_1_1MoveGroupCommander.html
-##
-## .. _RobotCommander:
-##    http://docs.ros.org/melodic/api/moveit_commander/html/classmoveit__commander_1_1robot_1_1RobotCommander.html
-##
-## .. _PlanningSceneInterface:
-##    http://docs.ros.org/melodic/api/moveit_commander/html/classmoveit__commander_1_1planning__scene__interface_1_1PlanningSceneInterface.html
-##
-## .. _DisplayTrajectory:
-##    http://docs.ros.org/melodic/api/moveit_msgs/html/msg/DisplayTrajectory.html
-##
-## .. _RobotTrajectory:
-##    http://docs.ros.org/melodic/api/moveit_msgs/html/msg/RobotTrajectory.html
-##
-## .. _rospy:
-##    http://docs.ros.org/melodic/api/rospy/html/
-## CALL_SUB_TUTORIAL imports
-## CALL_SUB_TUTORIAL setup
-## CALL_SUB_TUTORIAL basic_info
-## CALL_SUB_TUTORIAL plan_to_joint_state
-## CALL_SUB_TUTORIAL plan_to_pose
-## CALL_SUB_TUTORIAL plan_cartesian_path
-## CALL_SUB_TUTORIAL display_trajectory
-## CALL_SUB_TUTORIAL execute_plan
-## CALL_SUB_TUTORIAL add_box
-## CALL_SUB_TUTORIAL wait_for_scene_update
-## CALL_SUB_TUTORIAL attach_object
-## CALL_SUB_TUTORIAL detach_object
-## CALL_SUB_TUTORIAL remove_object
-## END_TUTORIAL

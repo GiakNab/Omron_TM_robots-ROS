@@ -116,12 +116,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     # reason not to.
     move_group = self.move_group
 
-    ## BEGIN_SUB_TUTORIAL plan_to_joint_state
-    ##
-    ## Planning to a Joint Goal
-    ## ^^^^^^^^^^^^^^^^^^^^^^^^
-    ## The Panda's zero configuration is at a `singularity <https://www.quora.com/Robotics-What-is-meant-by-kinematic-singularity>`_ so the first
-    ## thing we want to do is move it to a slightly better configuration.
     # We can get the joint values from the group and adjust some of the values:
     joint_goal = move_group.get_current_joint_values()
     joint_goal[0] = pi
@@ -168,13 +162,13 @@ class MoveGroupPythonIntefaceTutorial(object):
     ## We can plan a motion for this group to a desired pose for the
     ## end-effector:
     pose_goal = geometry_msgs.msg.Pose()
-    pose_goal.orientation.x = 0.0
-    pose_goal.orientation.y = 0.0
-    pose_goal.orientation.z = 0.0
-    pose_goal.orientation.w = 0.5
-    pose_goal.position.x = 0.2
-    pose_goal.position.y = -0.2
-    pose_goal.position.z = 0.3
+    pose_goal.orientation.x = -0.7070
+    pose_goal.orientation.y = 0.7070
+    pose_goal.orientation.z = 1.55e-5
+    pose_goal.orientation.w = 3.8e-5
+    pose_goal.position.x = -0.537
+    pose_goal.position.y = 0.205
+    pose_goal.position.z = 0.405
 
     move_group.set_pose_target(pose_goal)
 
@@ -212,14 +206,14 @@ class MoveGroupPythonIntefaceTutorial(object):
     waypoints = []
 
     wpose = move_group.get_current_pose().pose
-    wpose.position.z -= scale * 0.1  # First move up (z)
-    wpose.position.y += scale * 0.2  # and sideways (y)
+    wpose.position.z -= scale * 0.05  # First move up (z)
+    wpose.position.y += scale * 0.15  # and sideways (y)
     waypoints.append(copy.deepcopy(wpose))
 
-    wpose.position.x += scale * 0.1  # Second move forward/backwards in (x)
+    wpose.position.x += scale * 0.15  # Second move forward/backwards in (x)
     waypoints.append(copy.deepcopy(wpose))
 
-    wpose.position.y -= scale * 0.1  # Third move sideways (y)
+    wpose.position.y -= scale * 0.15  # Third move sideways (y)
     waypoints.append(copy.deepcopy(wpose))
 
     # We want the Cartesian path to be interpolated at a resolution of 1 cm
@@ -363,16 +357,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     eef_link = self.eef_link
     group_names = self.group_names
 
-    ## BEGIN_SUB_TUTORIAL attach_object
-    ##
-    ## Attaching Objects to the Robot
-    ## ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ## Next, we will attach the box to the Panda wrist. Manipulating objects requires the
-    ## robot be able to touch them without the planning scene reporting the contact as a
-    ## collision. By adding link names to the ``touch_links`` array, we are telling the
-    ## planning scene to ignore collisions between those links and the box. For the Panda
-    ## robot, we set ``grasping_group = 'hand'``. If you are using a different robot,
-    ## you should change this value to the name of your end effector group name.
     grasping_group = 'gripper'
     touch_links = robot.get_link_names(group=grasping_group)
     scene.attach_box(eef_link, box_name, touch_links=touch_links)
@@ -455,6 +439,20 @@ def main():
     print("============ Press 'Enter' to go back home position...")
     raw_input()
     tutorial.move_joint_to_joint(home_goal)
+
+    print("============ Press 'Enter' to go a pose (position/orientation) goal...")
+    raw_input()
+    tutorial.go_to_pose_goal()
+
+    #i=0
+    #print("Do you want to execute in loop? Press Y to run")
+    #if raw_input() == 'Y':
+      #while i < 4:
+        #tutorial.go_to_joint_state()
+        #cartesian_plan, fraction = tutorial.plan_cartesian_path()
+        #tutorial.execute_plan(cartesian_plan)
+        #tutorial.move_joint_to_joint(home_goal)
+        #i+=1
 
     print ("============ Python tutorial demo complete!")
   except rospy.ROSInterruptException:
