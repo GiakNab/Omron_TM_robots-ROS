@@ -3,8 +3,11 @@
 
 This repo has been forked from [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1) that provides ROS support for techman robots. I’m developing new packages which enable the use of tools like MoveIt and Gazebo with Omron collaborative robots. For the moment only pkgs relative to TM5-700 robotic arm has been well developed. <br/>
 This repo has been tested using the __TM5-700__ with __TMFlow 1.84.2200__ , with __ROS Melodic__, __MoveIt__, __Gazebo 9.19.0__ under __Ubuntu 18.04__.<br/>
+## &sect; __How to navigate into this Repository__
+The __tmr_ros1__ folder is a metapackage containing the driver, standard msgs and urdf description folders of the Omron robots. The other pkgs outside the metapkg are still under developing and will be merded once properly working.
 
-## __1.ROS Driver__
+
+## __1.What the ROS Driver does?__
 
 The existing TM ROS driver is a __single ROS node__ that handles robot(TMFlow)-pc(ROS) communication through an ethernet cable (rj45), implementing the TCP/IP communication protocols described in [espression_editor](src/documents/tm_expression_editor_and_listen_node_manual.pdf).  In details the driver connects to _TMflow Ethernet Slave_ and to a _Listen node_ running at a _TMflow project_. Thanks to this the user can get the robot state and can control the robot using _External Script_. <br/>
 The TM ROS driver node also offers the following interfaces:
@@ -35,8 +38,7 @@ send motion command to _Listen node_, the motion type include PTP, LINE, CIRC an
 >
 
 ## __2. Setup__
-How to establish a connection with the Robot's Listen Node and start the communication.<br/>
-In this part is explained step by step how to setup your Robot and Laptop. 
+In this part is explained step by step how to establish a connection with the Robot's Listen Node and start the communication.<br/>
 
 ### &sect; __Omron TM robot setting__
 1) Download and upload on the robot the "Data_Table_Setting_TM_ROS_Default.xml", a file from which is possible to select the R & W variables accessible from the controller. 
@@ -44,7 +46,7 @@ In this part is explained step by step how to setup your Robot and Laptop.
 $ cd ~/Desktop
 $ git clone https://github.com/TechmanRobotInc/TM_Export
 
-2) Place the downloaded component in a USB stick labeled "TMROBOT", insert the USB in the robot controller then on TM flow navigate to => System => Import/Export in order to import the component onto the robot. 
+2) Place the downloaded component in a USB stick labeled "TMROBOT", insert the USB in the robot controller then on TM flow navigate to => System => Import/Export in order to import the component onto the robot. (follow the steps here if necessary [how to insert the USB flash drive to the Control Box](https://github.com/TechmanRobotInc/TM_Export))
 
 3) Shutdown the robot.
 
