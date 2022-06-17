@@ -1,10 +1,13 @@
 
-# __User Guide for using Omron TM robots with ROS tools__
+# __Omron TM robots ROS user guide__
 
-This repo has been forked from [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1) that provides ROS support for techman robots. I’m developing new packages which enable the use of tools like MoveIt and Gazebo with Omron collaborative robots. For the moment only pkgs relative to TM5-700 robotic arm has been well developed. <br/>
+This repo has been forked from [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1), for any issue regarding the ROS driver refers to techman robot page.
+The additional packages you will find in this repo have been developed in collaboration with the Robotics team of the Omron ATC Barcellona during my PhD visiting period. <br/>
 This repo has been tested using the __TM5-700__ with __TMFlow 1.84.2200__ , with __ROS Melodic__, __MoveIt__, __Gazebo 9.19.0__ under __Ubuntu 18.04__.<br/>
 ## &sect; __How to navigate into this Repository__
 The __tmr_ros1__ folder is a metapackage containing the driver, standard msgs and urdf description folders of the Omron robots. The other pkgs outside the metapkg are still under developing and will be merded once properly working.
+
+I’m developing new packages which enable the use of tools like MoveIt and Gazebo with Omron collaborative robots. For the moment only pkgs relative to TM5-700 robotic arm has been well developed.<br>
 
 
 ## __1.What the ROS Driver does?__
