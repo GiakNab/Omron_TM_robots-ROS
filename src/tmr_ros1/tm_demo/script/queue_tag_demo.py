@@ -45,17 +45,18 @@ def queue_tag_demo(by_polling):
     rospy.wait_for_service('tm_driver/set_event')
     rospy.wait_for_service('tm_driver/set_positions')
     rospy.wait_for_service('tm_driver/ask_sta')
-
-    set_event = rospy.ServiceProxy('tm_driver/set_event', SetEvent)
+    
+    #rospy.ServiceProxy(name, service_class, persistent=False, headers=None)
+    set_event = rospy.ServiceProxy('tm_driver/set_event', SetEvent) 
     set_positions = rospy.ServiceProxy('tm_driver/set_positions', SetPositions)
     ask_sta = rospy.ServiceProxy('tm_driver/ask_sta', AskSta)
 
     # 4 points (joint angle[rad])
     points = [
-        [0.,0.,0.,0.,0.,0.],
-        [0.,0.,0.4,0.,0.,0.],
-        [0.,0.,0.8,0.,0.,0.],
-        [0.,0.,1.2,0.,0.,0.]
+        [1.5, 0., 0., 0., 0., 0.],
+        [1.5, 0, 0.5, 0., 0., 0.],
+        [1.8, 0, 1.,  0., 0., 0.],
+        [3.0, 0, 1.5, 0., 0., 0.]
     ]
 
     # send 4 motion command
@@ -80,7 +81,7 @@ def queue_tag_demo(by_polling):
 
 if __name__ == '__main__':
     try:
-        #queue_tag_demo(False)
-        queue_tag_demo(True)
+        queue_tag_demo(False)
+        #queue_tag_demo(True)
     except rospy.ROSInterruptException:
         pass

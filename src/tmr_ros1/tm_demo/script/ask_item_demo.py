@@ -36,13 +36,13 @@ def ask_item_demo():
 
     # using 'tm_driver/ask_item' service
     rospy.wait_for_service('tm_driver/ask_item')
-    ask_item = rospy.ServiceProxy('tm_driver/ask_item', AskItem)
+    ask_item = rospy.ServiceProxy('tm_driver/ask_item', AskItem, persistent=True)
 
     rospy.sleep(0.5)
 
     # ask hand-eye info. (non-block)
-    res0 = ask_item('he0', 'HandCamera_Value', 0)
-    rospy.loginfo('id: %s, value: %s\n', res0.id, res0.value)
+    #res0 = ask_item('he0', 'HandCamera_Value', 0)
+    #rospy.loginfo('id: %s, value: %s\n', res0.id, res0.value)
 
     """
     Note
@@ -60,17 +60,21 @@ def ask_item_demo():
 
     """
 
-    rospy.sleep(0.5)
+    #rospy.sleep(0.5)
 
     # ask hand-eye info. (block until receive or timeout)
-    res1 = ask_item('he1', 'HandCamera_Value', 1)
-    rospy.loginfo('id: %s, value: %s\n', res1.id, res1.value)
+    #res1 = ask_item('he1', 'HandCamera_Value', 1)
+    #rospy.loginfo('id: %s, value: %s\n', res1.id, res1.value)
 
-    rospy.sleep(0.5)
+    #rospy.sleep(0.5)
 
     # ask delta DH info.
-    resd = ask_item('dd', 'DeltaDH', 1)
-    rospy.loginfo('id: %s, value: %s\n', resd.id, resd.value)
+    #resd = ask_item('dd', 'DeltaDH', 1)
+    #rospy.loginfo('id: %s, value: %s\n', resd.id, resd.value)
+
+
+    resj = ask_item('jt', 'Joint_Torque', 1)
+    #rospy.loginfo('id: %s, value: %s\n', resj.id, resj.value)
 
     """
     Note
@@ -96,10 +100,12 @@ def ask_item_demo():
     ]
     """
 
-    rospy.sleep(0.5)
+    rospy.sleep(2)
 
 if __name__ == '__main__':
     try:
-        ask_item_demo()
+        while (1):
+          ask_item_demo()
+
     except rospy.ROSInterruptException:
         pass
