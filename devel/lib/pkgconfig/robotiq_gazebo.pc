@@ -1,4 +1,4 @@
-prefix=/home/giacomo/git_workspace/devel
+prefix=/home/giacomo/git_workspace/omron_test_ws/devel
 
 Name: robotiq_gazebo
 Description: Description of robotiq_gazebo

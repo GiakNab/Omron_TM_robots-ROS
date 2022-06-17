@@ -67,14 +67,14 @@ set(robotiq_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robotiq_description_SOURCE_PREFIX /home/giacomo/git_workspace/src/robotiq/robotiq_description)
-  set(robotiq_description_DEVEL_PREFIX /home/giacomo/git_workspace/devel)
+  set(robotiq_description_SOURCE_PREFIX /home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_description)
+  set(robotiq_description_DEVEL_PREFIX /home/giacomo/git_workspace/omron_test_ws/devel)
   set(robotiq_description_INSTALL_PREFIX "")
   set(robotiq_description_PREFIX ${robotiq_description_DEVEL_PREFIX})
 else()
   set(robotiq_description_SOURCE_PREFIX "")
   set(robotiq_description_DEVEL_PREFIX "")
-  set(robotiq_description_INSTALL_PREFIX /home/giacomo/git_workspace/install)
+  set(robotiq_description_INSTALL_PREFIX /home/giacomo/git_workspace/omron_test_ws/install)
   set(robotiq_description_PREFIX ${robotiq_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/giacomo/git_workspace/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/giacomo/git_workspace/omron_test_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

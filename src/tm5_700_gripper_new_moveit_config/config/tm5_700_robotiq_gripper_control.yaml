@@ -1,0 +1,7 @@
+tm5_700_robotiq: 
+  gripper_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+      - robotiq_85_left_knuckle_joint
+    gains:
+      robotiq_85_left_knuckle_joint: {p: 40,  i: 1, d: 0.0, i_clamp: 1}

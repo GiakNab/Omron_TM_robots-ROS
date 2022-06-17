@@ -1,8 +1,8 @@
-# Install script for directory: /home/giacomo/git_workspace/src/tmr_ros1/tm_description
+# Install script for directory: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/install")
+  set(CMAKE_INSTALL_PREFIX "/home/giacomo/git_workspace/omron_test_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description/cmake" TYPE FILE FILES
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_descriptionConfig.cmake"
-    "/home/giacomo/git_workspace/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_descriptionConfig-version.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_descriptionConfig.cmake"
+    "/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/tm_description/catkin_generated/installspace/tm_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE FILE FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE FILE FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_description/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_description/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_description/urdf")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_description/urdf")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/src/tmr_ros1/tm_description/meshes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tm_description" TYPE DIRECTORY FILES "/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tm_description/meshes")
 endif()
 

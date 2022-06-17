@@ -1,0 +1,8 @@
+prefix=/home/giacomo/git_workspace/omron_test_ws/devel
+
+Name: python_move_interface
+Description: Description of python_move_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

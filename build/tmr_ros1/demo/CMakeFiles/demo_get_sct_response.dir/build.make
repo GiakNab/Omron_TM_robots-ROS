@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/src
+CMAKE_SOURCE_DIR = /home/giacomo/git_workspace/omron_test_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giacomo/git_workspace/build
+CMAKE_BINARY_DIR = /home/giacomo/git_workspace/omron_test_ws/build
 
 # Include any dependencies generated for this target.
 include tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/depend.make
@@ -58,17 +58,17 @@ include tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/progress.make
 include tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/flags.make
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/flags.make
-tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o: /home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o -c /home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp
+tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o: /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o -c /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.i"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp > CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.i
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp > CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.i
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.s"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp -o CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.s
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/demo_get_sct_response.cpp -o CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.s
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o.requires:
 
@@ -88,32 +88,32 @@ demo_get_sct_response_OBJECTS = \
 # External object files for target demo_get_sct_response
 demo_get_sct_response_EXTERNAL_OBJECTS =
 
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/build.make
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libroscpp.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librostime.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libcpp_common.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response"
-	cd /home/giacomo/git_workspace/build/tmr_ros1/demo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_get_sct_response.dir/link.txt --verbose=$(VERBOSE)
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/get_status_demo_src/demo_get_sct_response.cpp.o
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/build.make
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libroscpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/librostime.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /opt/ros/melodic/lib/libcpp_common.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response: tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/giacomo/git_workspace/omron_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response"
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_get_sct_response.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/build: /home/giacomo/git_workspace/devel/lib/demo/demo_get_sct_response
+tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/build: /home/giacomo/git_workspace/omron_test_ws/devel/lib/demo/demo_get_sct_response
 
 .PHONY : tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/build
 
@@ -122,10 +122,10 @@ tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/requires: tmr_ros1/demo/CMake
 .PHONY : tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/requires
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/clean:
-	cd /home/giacomo/git_workspace/build/tmr_ros1/demo && $(CMAKE_COMMAND) -P CMakeFiles/demo_get_sct_response.dir/cmake_clean.cmake
+	cd /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo && $(CMAKE_COMMAND) -P CMakeFiles/demo_get_sct_response.dir/cmake_clean.cmake
 .PHONY : tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/clean
 
 tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/depend:
-	cd /home/giacomo/git_workspace/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/src /home/giacomo/git_workspace/src/tmr_ros1/demo /home/giacomo/git_workspace/build /home/giacomo/git_workspace/build/tmr_ros1/demo /home/giacomo/git_workspace/build/tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/giacomo/git_workspace/omron_test_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/giacomo/git_workspace/omron_test_ws/src /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo /home/giacomo/git_workspace/omron_test_ws/build /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo /home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tmr_ros1/demo/CMakeFiles/demo_get_sct_response.dir/depend
 

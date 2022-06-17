@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/StaResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/StaResponse.h
 string
 -
 vector
@@ -24,13 +24,13 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/demo_get_sta_response.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/demo_get_sta_response.cpp
 ros/ros.h
 -
 std_msgs/String.h
 -
 tm_msgs/StaResponse.h
-/home/giacomo/git_workspace/src/tmr_ros1/demo/get_status_demo_src/tm_msgs/StaResponse.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/demo/get_status_demo_src/tm_msgs/StaResponse.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

@@ -1,4 +1,4 @@
-prefix=/home/giacomo/git_workspace/install
+prefix=/home/giacomo/git_workspace/omron_test_ws/install
 
 Name: robotiq_description
 Description: Description of robotiq_description

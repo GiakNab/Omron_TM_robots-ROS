@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_mimic_joint_plugin.dir/src/mimic_joint_plugin.cpp.o"
-  "/home/giacomo/git_workspace/devel/lib/libgazebo_mimic_joint_plugin.pdb"
-  "/home/giacomo/git_workspace/devel/lib/libgazebo_mimic_joint_plugin.so"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_mimic_joint_plugin.pdb"
+  "/home/giacomo/git_workspace/omron_test_ws/devel/lib/libgazebo_mimic_joint_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

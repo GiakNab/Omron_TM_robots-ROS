@@ -67,14 +67,14 @@ set(tmr_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(tmr_description_SOURCE_PREFIX /home/giacomo/git_workspace/src/tmr_ros1/tmr_description)
-  set(tmr_description_DEVEL_PREFIX /home/giacomo/git_workspace/devel)
+  set(tmr_description_SOURCE_PREFIX /home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/tmr_description)
+  set(tmr_description_DEVEL_PREFIX /home/giacomo/git_workspace/omron_test_ws/devel)
   set(tmr_description_INSTALL_PREFIX "")
   set(tmr_description_PREFIX ${tmr_description_DEVEL_PREFIX})
 else()
   set(tmr_description_SOURCE_PREFIX "")
   set(tmr_description_DEVEL_PREFIX "")
-  set(tmr_description_INSTALL_PREFIX /home/giacomo/git_workspace/install)
+  set(tmr_description_INSTALL_PREFIX /home/giacomo/git_workspace/omron_test_ws/install)
   set(tmr_description_PREFIX ${tmr_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/giacomo/git_workspace/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/giacomo/git_workspace/omron_test_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

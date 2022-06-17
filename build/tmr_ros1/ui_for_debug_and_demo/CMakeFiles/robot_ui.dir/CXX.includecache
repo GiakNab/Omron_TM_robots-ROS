@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/UVLADIE3JM/moc_tm_ros_driver_windows.cpp
+/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/UVLADIE3JM/moc_tm_ros_driver_windows.cpp
 ../../../../../src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp
+/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/mocs_compilation.cpp
 UVLADIE3JM/moc_tm_ros_driver_windows.cpp
-/home/giacomo/git_workspace/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/UVLADIE3JM/moc_tm_ros_driver_windows.cpp
+/home/giacomo/git_workspace/omron_test_ws/build/tmr_ros1/ui_for_debug_and_demo/robot_ui_autogen/UVLADIE3JM/moc_tm_ros_driver_windows.cpp
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/ConnectTM.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/ConnectTM.h
 ros/service_traits.h
 -
 tm_msgs/ConnectTMRequest.h
@@ -26,7 +26,7 @@ tm_msgs/ConnectTMRequest.h
 tm_msgs/ConnectTMResponse.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/ConnectTMRequest.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/ConnectTMRequest.h
 string
 -
 vector
@@ -42,7 +42,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/ConnectTMResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/ConnectTMResponse.h
 string
 -
 vector
@@ -58,25 +58,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/FeedbackState.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
-/home/giacomo/git_workspace/devel/include/tm_msgs/SctResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/FeedbackState.h
 string
 -
 vector
@@ -94,7 +76,25 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/SetIO.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/SctResponse.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/SetIO.h
 ros/service_traits.h
 -
 tm_msgs/SetIORequest.h
@@ -102,7 +102,7 @@ tm_msgs/SetIORequest.h
 tm_msgs/SetIOResponse.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/SetIORequest.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/SetIORequest.h
 string
 -
 vector
@@ -118,7 +118,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/SetIOResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/SetIOResponse.h
 string
 -
 vector
@@ -134,25 +134,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/giacomo/git_workspace/devel/include/tm_msgs/StaResponse.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
-/home/giacomo/git_workspace/devel/include/tm_msgs/SvrResponse.h
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/StaResponse.h
 string
 -
 vector
@@ -170,29 +152,47 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
+/home/giacomo/git_workspace/omron_test_ws/devel/include/tm_msgs/SvrResponse.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/main.cpp
 tm_ros_driver_windows.hpp
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
 QApplication
 -
 ros/console.h
 -
 
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ros_page.cpp
 tm_ros_driver_windows.hpp
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
 
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.cpp
 tm_ros_driver_windows.hpp
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
 ui_tm_ros_driver_windows.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/ui_tm_ros_driver_windows.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/ui_tm_ros_driver_windows.h
 
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_ros_driver_windows.hpp
 ros/ros.h
 -
 std_msgs/String.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/std_msgs/String.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/std_msgs/String.h
 string
 -
 QMainWindow
@@ -206,17 +206,17 @@ QThread
 QStandardItemModel
 -
 tm_msgs/FeedbackState.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/FeedbackState.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/FeedbackState.h
 tm_msgs/SctResponse.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SctResponse.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SctResponse.h
 tm_msgs/StaResponse.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/StaResponse.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/StaResponse.h
 tm_msgs/SvrResponse.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SvrResponse.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SvrResponse.h
 tm_msgs/ConnectTM.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/ConnectTM.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/ConnectTM.h
 tm_msgs/SetIO.h
-/home/giacomo/git_workspace/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SetIO.h
+/home/giacomo/git_workspace/omron_test_ws/src/tmr_ros1/ui_for_debug_and_demo/src/tm_msgs/SetIO.h
 ctime
 -
 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="tm5_700_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
+  <xacro:arg name="stl_mesh" default="false" />
+
+  <!-- gazebo stuff -->
+  <xacro:include filename="$(find tm5_description)/urdf/common.gazebo.xacro" />
+
+
+  <!-- tm700 + 2f gripper -->
+  <xacro:include filename="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro" />
+  
+  <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="base" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint> 
+
+</robot>

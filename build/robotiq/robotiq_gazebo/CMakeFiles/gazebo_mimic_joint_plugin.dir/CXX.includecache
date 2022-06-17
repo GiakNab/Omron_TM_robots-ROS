@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/include/robotiq_gazebo/mimic_joint_plugin.h
+/home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/include/robotiq_gazebo/mimic_joint_plugin.h
 ros/ros.h
 -
 control_toolbox/pid.h
@@ -22,7 +22,7 @@ gazebo/physics/physics.hh
 gazebo/common/common.hh
 -
 
-/home/giacomo/git_workspace/src/robotiq/robotiq_gazebo/src/mimic_joint_plugin.cpp
+/home/giacomo/git_workspace/omron_test_ws/src/robotiq/robotiq_gazebo/src/mimic_joint_plugin.cpp
 robotiq_gazebo/mimic_joint_plugin.h
 -
 
