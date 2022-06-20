@@ -1,7 +1,7 @@
 
 # __Omron TM robots ROS user guide__
 
-This repo has been forked from [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page.
+This repo has been forked from [TechmanRobot]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page.
 The additional packages you will find in this repo have been developed in collaboration with the Robotics team of the Omron ATC Barcelona during my PhD visiting period. <br/>
 This repo has been developed and tested using the __TM5-700__ with __TMFlow 1.84.2200__ , with __ROS Melodic__, __MoveIt__, __Gazebo 9.19.0__ under __Ubuntu 18.04__.<br/>
 
@@ -14,7 +14,7 @@ I’m developing new packages which enable the use of tools like MoveIt and Gaze
 ## __1.What the ROS Driver does?__
 
 The existing TM ROS driver is a __single ROS node__ that handles robot(TMFlow)-pc(ROS) communication through an ethernet cable (rj45), implementing the TCP/IP communication protocols described in [espression_editor](src/documents/tm_expression_editor_and_listen_node_manual.pdf).  In details the driver connects to _TMflow Ethernet Slave_ and to a _Listen node_ running at a _TMflow project_. Thanks to this the user can get the robot state and can control the robot using _External Script_. <br/>
-The TM ROS driver node offers different interfaces (Topic/Service), a Readme file is available in [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1).
+The TM ROS driver node offers different interfaces (Topic/Service), for firther details please refers to the Readme file in [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1).
 
 ## __2. Setup__
 In this part is explained step by step how to establish a connection with the Robot's Listen Node and start the communication.<br/>
