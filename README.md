@@ -36,16 +36,16 @@ To allow the TCP/IP connection with the robot it is required to modify the defau
 The default virtual network adapter uses __NAT__ (Network Address Translation) mode.
 With this mode the guest operating system can access external networks, including the internet, but the guest machine is not accessible from the outside.
 
-![2](src/figures/net1.png)
+![2](src/tmr_ros1/figures/net1.png)
 
 So a new virtual network adapter that uses __Bridged Adapter__ must be enabled. With this mode packets are sent and received directly from/to the virtual network adapter without additional routing so that the VM can be accessed from other hosts connected to the physical network.<br/>
 The correct network adapter must be selected (the physical adapter used for the connection with the robot).
 
-![3](src/figures/net2.png)
+![3](src/tmr_ros1/figures/net2.png)
 
 Finally a proper __static IP__ address must be assigned to the VM so that the VM and the robot belong to the same __private network__.
 
-![4](src/figures/net3.png)
+![4](src/tmr_ros1/figures/net3.png)
 
 ###  &sect; __Physical connection to TM ROBOT__
 The robot and the pc must be physically connected through an __ethernet cable__ (rj45). <br/>
@@ -62,20 +62,20 @@ On the robot side the steps to enable the communication are the following:
 
 1. Create a new TMFlow project with an infinite loop on a __Listen__ node. Just drag the node from the _nodes menu_, the node parameters can be left to their default value.
 
-![6](src/figures/listen2.png)
+![6](src/tmr_ros1/figures/listen2.png)
 
 When the process enters the Listen Node, it __stays in the Listen Node__ until it triggers and leaves with one of the two exit condition:<br/>
 __Pass__: executes ScriptExit() or item stopped <br/>
 __Fail__: connection Timeout or data Timeout or before the Socket Server been established successfully, the flow process has entered the Listen Node <br/>
 So then connect the _Fail Path_ to a _Stop_ node and the _Pass Path_ to a _Goto_ node to loop back to the listen node.
 
- ![7](src/figures/listen1.png)
+ ![7](src/tmr_ros1/figures/listen1.png)
 
 2. The network settings in __System &rArr; Network__ can be left to their __default__ value.
 This step is different from what [tmr_ros1]( https://github.com/TechmanRobotInc/tmr_ros1) describes. Connecting the ethernet cable to the only one __LAN__ port (not the GigE ports) of the control box, the Ethernet Slave and the Listen open on __169.254.77.215__.
 It is sufficient to set the static ip of the Virtual Machine so that it belongs to the same private network (__for example 169.254.77.210__).
 
- ![8](src/figures/open.png)
+ ![8](src/tmr_ros1/figures/open.png)
 
 :bulb:__WARNING__ __Not connect__ the ethernet cable to a __GigE LAN__ port otherwise the Ethernet Slave and the Listen open on the local host 127.0.0.1 and the connection fails <br/>
 :bulb:__WARNING__ If the Ethernet Slave and the Listen still open on the __local host 127.0.0.1__ try the other port though
@@ -83,12 +83,12 @@ It is sufficient to set the static ip of the Virtual Machine so that it belongs 
 
 3. Enable the __Ethenet Slave__ and set the __Ethernet Slave Data Table__ from __Setting &rArr; Connection &rArr; Ethernet Slave__.
 
- ![9](src/figures/ethernet1.png)
+ ![9](src/tmr_ros1/figures/ethernet1.png)
 
 4. Run the TMFlow project on the robot side and open a terminal on the pc side. <br/>
 Check the robot-pc connection with a __ping__ to the robot ip address.
 
- ![13](src/figures/ping.png)
+ ![13](src/tmr_ros1/figures/ping.png)
 
 
 ## __3. Usage__
