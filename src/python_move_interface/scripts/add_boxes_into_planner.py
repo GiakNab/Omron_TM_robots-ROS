@@ -466,11 +466,13 @@ def main():
      print ("============ Press `Enter` to add a box to the planning scene ...")
      raw_input()
      tutorial.add_box()
+     tutorial.attach_box()
+
      tutorial.add_collision_obj()
 
-     print ("============ Press `Enter` to attach a Box to the TM robot ...")
-     raw_input()
-     tutorial.attach_box()
+     #print ("============ Press `Enter` to attach a Box to the TM robot ...")
+     #raw_input()
+     #tutorial.attach_box()
 
      print ("============ Press `Enter` to close the gripper")
      raw_input()

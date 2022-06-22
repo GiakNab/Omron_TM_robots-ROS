@@ -19,15 +19,15 @@ class CubeSpawner():
 		self.dm = rospy.ServiceProxy("/gazebo/delete_model", DeleteModel)
 		self.ms = rospy.ServiceProxy("/gazebo/get_model_state", GetModelState)
 
-	def checkModel(self):
-		res = self.ms("cube", "world")
+	def checkModel(self, name="cube"):
+		res = self.ms(name, "world")
 		return res.success
 
-	def getPosition(self):
-		res = self.ms("cube", "world")
+	def getPosition(self, name="cube"):
+		res = self.ms(name, "world")
 		return res.pose.position.z
 
-	def spawnModel(self):
+	def spawnModel(self, name="cube"):
 		# print(self.col)
 		cube = self.cubes[self.col]
 		with open(cube,"r") as f:
@@ -35,8 +35,8 @@ class CubeSpawner():
 		
 		quat = tf.transformations.quaternion_from_euler(0,0,0)
 		orient = Quaternion(quat[0],quat[1],quat[2],quat[3])
-		pose = Pose(Point(x=0,y=-0.55,z=0.75), orient)
-		self.sm("cube", cube_urdf, '', pose, 'world')
+		pose = Pose(Point(x=0,y=+0.45,z=0.75), orient)
+		self.sm(name, cube_urdf, '', pose, 'world')
 		if self.col<2:
 			self.col += 1
 		else:
