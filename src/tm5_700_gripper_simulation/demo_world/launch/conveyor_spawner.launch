@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+	<group ns="conveyor">
+		<node name="spawn_model_belt" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/conveyor.urdf -urdf -model conveyor_belt" respawn="false" output="screen" />
+	</group>	
+
+    <node name="cube_spawner" pkg="demo_world" type="demo.py" output="screen"/>
+    
+</launch>
