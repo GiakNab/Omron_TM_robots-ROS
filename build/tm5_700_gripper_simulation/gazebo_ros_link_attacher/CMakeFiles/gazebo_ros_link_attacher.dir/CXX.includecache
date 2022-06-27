@@ -47,6 +47,8 @@ ros/message_operations.h
 -
 
 /home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_simulation/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher.h
+boost/thread/recursive_mutex.hpp
+-
 ros/ros.h
 -
 sdf/sdf.hh
@@ -77,6 +79,8 @@ gazebo_ros_link_attacher/AttachResponse.h
 /home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_simulation/gazebo_ros_link_attacher/include/gazebo_ros_link_attacher/AttachResponse.h
 
 /home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_simulation/gazebo_ros_link_attacher/src/gazebo_ros_link_attacher.cpp
+boost/thread/recursive_mutex.hpp
+-
 gazebo/common/Plugin.hh
 -
 ros/ros.h
