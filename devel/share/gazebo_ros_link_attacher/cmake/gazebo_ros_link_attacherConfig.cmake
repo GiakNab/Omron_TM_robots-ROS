@@ -67,7 +67,7 @@ set(gazebo_ros_link_attacher_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(gazebo_ros_link_attacher_SOURCE_PREFIX /home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_simulation/gazebo_ros_link_attacher)
+  set(gazebo_ros_link_attacher_SOURCE_PREFIX /home/giacomo/git_workspace/omron_test_ws/src/gazebo_ros_link_attacher)
   set(gazebo_ros_link_attacher_DEVEL_PREFIX /home/giacomo/git_workspace/omron_test_ws/devel)
   set(gazebo_ros_link_attacher_INSTALL_PREFIX "")
   set(gazebo_ros_link_attacher_PREFIX ${gazebo_ros_link_attacher_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/giacomo/git_workspace/omron_test_ws/devel/include " STREQUAL " ")
         message(FATAL_ERROR "Project 'gazebo_ros_link_attacher' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'gazebo_ros_link_attacher' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/giacomo/git_workspace/omron_test_ws/src/tm5_700_gripper_simulation/gazebo_ros_link_attacher/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'gazebo_ros_link_attacher' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/giacomo/git_workspace/omron_test_ws/src/gazebo_ros_link_attacher/${idir}'.  ${_report}")
     endif()
     _list_append_unique(gazebo_ros_link_attacher_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/giacomo/git_workspace/omron_test_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/giacomo/git_workspace/omron_test_ws/devel/lib;/home/giacomo/git_workspace/omron_test_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

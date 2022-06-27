@@ -33,7 +33,7 @@ list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "tm5_700_gripper_simulation/demo_world"
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
 list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
 list(APPEND CATKIN_ORDERED_PACKAGES "gazebo_ros_link_attacher")
-list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "tm5_700_gripper_simulation/gazebo_ros_link_attacher")
+list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "gazebo_ros_link_attacher")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
 list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
 list(APPEND CATKIN_ORDERED_PACKAGES "robotiq_gazebo")
