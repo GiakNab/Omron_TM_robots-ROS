@@ -51,7 +51,7 @@ def wait_for_state_update(obj_name, box_name, box_is_known=False, box_is_attache
 def main():
   try:   
     #Istantiate the object 'test' from class TMRobotMoveGroupPy, default planner ="SBL"
-    tm5_700 = TMRobotMoveGroupPy("tm5_700_arm")
+    tm5_700 = TMRobotMoveGroupPy("tm5_700_arm", "RRTConnect")
     grasping_group="tm5_700_arm"
 
     tm5_700.move_group.allow_replanning(True)
