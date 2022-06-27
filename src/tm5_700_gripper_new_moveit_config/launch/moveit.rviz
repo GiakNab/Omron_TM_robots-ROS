@@ -202,7 +202,7 @@ Visualization Manager:
         Interactive Marker Size: 0.20000000298023224
         Joint Violation Color: 255; 0; 255
         Planning Group: tm5_700_arm
-        Query Goal State: false
+        Query Goal State: true
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -427,7 +427,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.8183095455169678
+      Distance: 2.86114501953125
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -442,10 +442,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.2547970116138458
+      Pitch: 0.47479698061943054
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 5.160398006439209
+      Yaw: 0.047212980687618256
     Saved: ~
 Window Geometry:
   Displays:

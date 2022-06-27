@@ -132,7 +132,7 @@ def main():
 
       joint_goal2[1] -= 0.1
       joint_goal2[2] -= 0.1
-      joint_goal2[3] -= 0.1
+      joint_goal2[3] += 0.15
 
       tm5_700.joint_state_move(joint_goal2)
 
@@ -144,6 +144,8 @@ def main():
         x_offset += 0.1
       elif i == 3:
         y_offset += 0.1
+
+    tm5_700.joint_state_move(joint_goal0)
 
   except rospy.ROSInterruptException:
     return
