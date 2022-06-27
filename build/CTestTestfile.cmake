@@ -7,7 +7,7 @@
 subdirs("gtest")
 subdirs("tmr_ros1/tm12_description")
 subdirs("tmr_ros1/tm5_700_gripper_description")
-subdirs("tm5_700_gripper_new_moveit_config")
+subdirs("tm5_700_gripper_moveit_config")
 subdirs("tmr_ros1/tm5_description")
 subdirs("omronTM_python_move_interface")
 subdirs("robotiq/robotiq_description")
