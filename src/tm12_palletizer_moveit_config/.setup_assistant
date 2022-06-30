@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: giacomo nabissi
     author_email: giacomo.nabissi@gmail.com
-    generated_timestamp: 1656572629
+    generated_timestamp: 1656574843

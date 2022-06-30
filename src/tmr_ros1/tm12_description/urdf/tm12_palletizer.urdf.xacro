@@ -11,7 +11,7 @@
 
   <!-- arm -->
   <!--xacro:tm12_robot prefix="" joint_limited="false" transmission_hw_interface="$(arg transmission_hw_interface)" /-->
-  <xacro:tm12_robot prefix="" joint_limited="false" stl_mesh="$(arg stl_mesh)" />
+  <xacro:tm12_robot prefix="" joint_limited="true" stl_mesh="$(arg stl_mesh)" />
 
 
     <!-- Joint to connect the gripper with the robot tool0 --> 
@@ -27,8 +27,8 @@
         <geometry>
           <mesh filename="package://tm12_description/meshes/tm12_1300/visual/schmalz_spb2.stl" />
         </geometry>
-        <material name="grey">
-          <color rgba="0.5 0.5 0.5 1"/>
+        <material name="light_blue">
+          <color rgba="0.3 1 1 1"/>
         </material>
       </visual>
       <collision>
@@ -48,7 +48,7 @@
     <joint name="world_joint" type="fixed">
       <parent link="world" />
       <child link="support" />
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
     </joint>
 
     <!-- Link that connect the robot with its cylindrical base--> 

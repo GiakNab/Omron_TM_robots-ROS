@@ -145,5 +145,3 @@ tm12_arm:
     - LazyPRMstar
     - SPARS
     - SPARStwo
-  projection_evaluator: joints(shoulder_1_joint,shoulder_2_joint)
-  longest_valid_segment_fraction: 0.005
