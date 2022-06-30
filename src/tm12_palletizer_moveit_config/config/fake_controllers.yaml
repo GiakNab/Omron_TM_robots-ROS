@@ -1,0 +1,13 @@
+controller_list:
+  - name: fake_tm12_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - shoulder_1_joint
+      - shoulder_2_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+initial:  # Define initial robot poses.
+  - group: tm12_arm
+    pose: All zero
