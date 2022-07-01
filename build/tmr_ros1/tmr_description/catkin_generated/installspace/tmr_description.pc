@@ -1,8 +1,0 @@
-prefix=/home/giacomo/git_workspace/omron_test_ws/install
-
-Name: tmr_description
-Description: Description of tmr_description
-Version: 1.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

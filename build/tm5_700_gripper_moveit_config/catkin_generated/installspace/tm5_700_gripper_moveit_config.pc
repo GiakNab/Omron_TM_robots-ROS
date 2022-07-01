@@ -1,8 +1,0 @@
-prefix=/home/giacomo/git_workspace/omron_test_ws/install
-
-Name: tm5_700_gripper_moveit_config
-Description: Description of tm5_700_gripper_moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
