@@ -1,8 +1,0 @@
-prefix=/home/giacomo/git_workspace/omron_test_ws/install
-
-Name: tm_gazebo
-Description: Description of tm_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

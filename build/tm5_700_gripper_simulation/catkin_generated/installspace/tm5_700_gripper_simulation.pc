@@ -1,8 +1,0 @@
-prefix=/home/giacomo/git_workspace/omron_test_ws/install
-
-Name: tm5_700_gripper_simulation
-Description: Description of tm5_700_gripper_simulation
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: moveit_core moveit_visual_tools moveit_ros_planning_interface controller_interface hardware_interface pluginlib

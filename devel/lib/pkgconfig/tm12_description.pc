@@ -1,8 +1,0 @@
-prefix=/home/giacomo/git_workspace/omron_test_ws/devel
-
-Name: tm12_description
-Description: Description of tm12_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
