@@ -30,7 +30,7 @@ def all_close(goal, actual, tolerance=0.01):
 
 class TMRobotMoveGroupPy:
 
-    def __init__(self, group_name, planner_id = "SBL"):
+    def __init__(self, group_name, planner_id = "RRTConnect"):
          ## First initialize `moveit_commander`_ and a `rospy`_ node:
         moveit_commander.roscpp_initialize(sys.argv)
         rospy.init_node('move_group_python_interface_tutorial', anonymous=True)

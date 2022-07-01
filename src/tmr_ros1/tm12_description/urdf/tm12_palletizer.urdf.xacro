@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="tm12_palletizer">
+
+
+  <!-- xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" /-->
+  <xacro:arg name="stl_mesh" default="false" />
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find tm5_description)/urdf/common.gazebo.xacro" />
+  <xacro:include filename="$(find tm12_description)/urdf/tm12.urdf.xacro" />
+
+  <!-- arm -->
+  <!--xacro:tm12_robot prefix="" joint_limited="false" transmission_hw_interface="$(arg transmission_hw_interface)" /-->
+  <xacro:tm12_robot prefix="" joint_limited="true" stl_mesh="$(arg stl_mesh)" />
+
+
+    <!-- Joint to connect the gripper with the robot tool0 --> 
+    <joint name="gripper_joint" type="fixed">
+      <parent link="tool0" />
+      <child link="vacuum_gripper" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <link name="vacuum_gripper">
+      <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0"/>
+        <geometry>
+          <mesh filename="package://tm12_description/meshes/tm12_1300/visual/schmalz_spb2.stl" />
+        </geometry>
+        <material name="light_blue">
+          <color rgba="0.3 1 1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://tm12_description/meshes/tm12_1300/visual/schmalz_spb2_collision.stl" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+        <mass value="0.2"/>
+        <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      </inertial>
+    </link> 
+
+    <!-- Joint to connect the robot with the world frame --> 
+    <link name="world" />
+    <joint name="world_joint" type="fixed">
+      <parent link="world" />
+      <child link="support" />
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
+    </joint>
+
+    <!-- Link that connect the robot with its cylindrical base--> 
+    <link name="support">
+      <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <geometry>
+          <cylinder radius="0.125" length="0.76"/>
+        </geometry>
+        <material name="black">
+          <color rgba="1 1 1 1"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.000000 0.000000 0.250000"/>
+        <mass value="0.2"/>
+        <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
+      </inertial>
+    </link>
+
+    <!-- Joint to connect the cylindrical base (support) with the base of the tm12_arm --> 
+    <joint name="sup_joint" type="fixed">
+      <parent link="support" />
+      <child link="base" />
+      <origin xyz="0 0 0.38" rpy="0 0 0" />
+    </joint>
+
+</robot>
