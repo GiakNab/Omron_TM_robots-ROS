@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="tm12_palletizer">
+<robot name="tm12_palletizer" xmlns:xacro="http://wiki.ros.org/xacro">
 
 
   <!-- xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" /-->
   <xacro:arg name="stl_mesh" default="false" />
 
   <!-- common stuff -->
-  <xacro:include filename="$(find tm5_description)/urdf/common.gazebo.xacro" />
+  <xacro:include filename="$(find tm12_description)/urdf/common.gazebo.xacro" />
   <xacro:include filename="$(find tm12_description)/urdf/tm12.urdf.xacro" />
 
   <!-- arm -->

@@ -1,5 +1,5 @@
-tm5_700_robotiq:
-  tm5_700_arm_controller:  
+tm12_palletizer:
+  tm12_arm_controller:  
     type: position_controllers/JointTrajectoryController
     joints:
       - shoulder_1_joint
