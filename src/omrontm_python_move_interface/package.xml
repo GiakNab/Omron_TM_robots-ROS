@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>omronTM_python_move_interface</name>
+  <name>omrontm_python_move_interface</name>
   <version>0.0.0</version>
-  <description>The omronTM_python_move_interface package</description>
+  <description>The omrontm_python_move_interface package</description>
 
 
   <maintainer email="giacomo.nabissi@gmail.com">giacomo</maintainer>

@@ -1,5 +1,5 @@
 <launch>
-  <rosparam file="$(find tm5_700_gripper_new_moveit_config)/config/tm5_700_robotiq_gripper_control.yaml" command="load"/>
+  <rosparam file="$(find tm5_700_gripper_moveit_config)/config/tm5_700_robotiq_gripper_control.yaml" command="load"/>
 
   <node name="gripper_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" ns="tm5_700_robotiq" args="gripper_controller "/>

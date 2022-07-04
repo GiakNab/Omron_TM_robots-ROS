@@ -1,11 +1,11 @@
 <launch>
-  <rosparam file="$(find tm5_700_gripper_moveit_config)/config/tm5_700_robotiq_joint_state.yaml" command="load"/>
+  <rosparam file="$(find tm12_palletizer_moveit_config)/config/tm12_joint_state_controller.yaml" command="load"/>
 
   <node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="tm5_700_robotiq" args="joint_state_controller "/>
+    output="screen" ns="tm12_palletizer" args="joint_state_controller "/>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type= "robot_state_publisher" respawn="false" output="screen">
-   <remap from="/joint_states" to="/tm5_700_robotiq/joint_states" />
+   <remap from="/joint_states" to="/tm12_palletizer/joint_states" />
    </node>
 
 </launch>

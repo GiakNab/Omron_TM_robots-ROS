@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(omronTM_python_move_interface)
+project(omrontm_python_move_interface)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)

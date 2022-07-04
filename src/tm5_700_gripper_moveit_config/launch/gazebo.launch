@@ -6,20 +6,20 @@
   <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <arg name="urdf_path" default="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro"/>
 
-  <!-- startup simulated world 
+  <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="worlds/empty.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gazebo_gui)"/>
-  </include> -->
+  </include> 
 
-    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find gazebo_ros_link_attacher)/worlds/test_attacher.world"/>
     <arg name="paused" value="false"/>
     <arg name="gui" value="$(arg gazebo_gui)"/>
-    <!-- more default parameters can be changed here -->
-  </include>
+     more default parameters can be changed here
+  </include> -->
 
   <!-- send robot urdf to param server -->
   <param name="robot_description" command="$(find xacro)/xacro.py $(arg urdf_path)
