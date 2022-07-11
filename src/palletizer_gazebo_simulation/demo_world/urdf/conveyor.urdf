@@ -6,21 +6,22 @@
 
 	<link name="world" />
 
-	<joint name="fixed" type="fixed">
+	<joint name="fixed0" type="fixed">
 		<parent link="world"/>
 		<child link="belt_visual"/>
-		<origin xyz="0.0 1.0 0.0" rpy="0.0 0.0 0"/>
+		<origin xyz="1.0 0.0 0.0" rpy="0.0 0.0 0"/>
 	</joint>
 	
 
 	<link name="belt_visual">
 		<inertial>
+			<!-- <origin xyz="1.1327E-16 -3.3286E-17 0.66019" rpy="0 0 0" /> -->
 			<origin xyz="1.1327E-16 -3.3286E-17 0.66019" rpy="0 0 0" />
 			<mass value="71.953" />
 			<inertia ixx="7.5972" ixy="-1.394E-14" ixz="1.9328E-17" iyy="0.99673" iyz="-9.2056E-18" izz="8.1168" />
 		</inertial>
 		<visual>
-			<origin xyz="0 0 0" rpy="0 0 0" />
+			<origin xyz="0 0.0 0" rpy="0 0 0" />
 			<geometry>
 				<mesh filename="package://demo_world/meshes/conveyor_belt.stl" />
 			</geometry>

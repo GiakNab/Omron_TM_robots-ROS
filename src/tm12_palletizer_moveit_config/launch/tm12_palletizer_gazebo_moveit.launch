@@ -10,6 +10,8 @@
 
   <!-- Load Gazebo empy world and send the urdf to server param as robot_description-->
   <include file= "$(find tm12_palletizer_moveit_config)/launch/gazebo.launch"/>
+  <!-- Load into Gazebo palletizer static environment --> 
+  <include file= "$(find demo_world)/launch/conveyor_spawner.launch"/>
    
   <!-- Spawn the controller for Gazebo--> 
   <include file= "$(find tm12_palletizer_moveit_config)/launch/tm12_joint_state_controller.launch"/>

@@ -6,11 +6,18 @@
   <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   <arg name="urdf_path" default="$(find tm12_description)/urdf/tm12_palletizer.urdf.xacro"/>
 
-  <!-- startup simulated world -->
+  <!-- startup simulated world 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="worlds/empty.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gazebo_gui)"/>
+  </include>
+  -->
+  <!-- This world contains the plugin to attach and detach objects to the gripper, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find gazebo_ros_link_attacher)/worlds/test_attacher.world"/>
+    <arg name="paused" value="false"/>
+    <!-- more default parameters can be changed here -->
   </include>
 
   <!-- send robot urdf to param server -->

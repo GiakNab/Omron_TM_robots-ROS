@@ -1,9 +1,25 @@
 <?xml version="1.0"?>
 <launch>
+
 	<group ns="conveyor">
 		<node name="spawn_model_belt" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/conveyor.urdf -urdf -model conveyor_belt" respawn="false" output="screen" />
-	</group>	
+	</group>
 
-    <node name="cube_spawner" pkg="demo_world" type="demo.py" output="screen"/>
+	<group ns="sup_pallet_1">
+		<node name="spawn_model_sup_pallet1" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/sup_pallet1.urdf -urdf -model sup_pallet1" respawn="false" output="screen" />
+	</group>
+
+	<group ns="sup_pallet_2">
+		<node name="spawn_model_sup_pallet2" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/sup_pallet2.urdf -urdf -model sup_pallet2" respawn="false" output="screen" />
+	</group>
+
+	<group ns="pallet_1">
+		<node name="spawn_model_pallet1" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/pallet1.urdf -urdf -model pallet1" respawn="false" output="screen" />
+	</group>
+
+	<group ns="pallet_2">
+		<node name="spawn_model_pallet2" pkg="gazebo_ros" type="spawn_model" args="-file $(find demo_world)/urdf/pallet2.urdf -urdf -model pallet2" respawn="false" output="screen" />
+	</group>
+    <!-- <node name="cube_spawner" pkg="demo_world" type="demo.py" output="screen"/> -->
     
 </launch>
