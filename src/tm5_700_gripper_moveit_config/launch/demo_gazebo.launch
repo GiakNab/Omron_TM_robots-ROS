@@ -3,7 +3,7 @@
   <!-- By default, we do not start a database (it can be large) -->
   <arg name="db" default="false" />
   <!-- Allow user to specify database location -->
-  <arg name="db_path" default="$(find tm5_700_gripper_new_moveit_config)/default_warehouse_mongo_db" />
+  <arg name="db_path" default="$(find tm5_700_gripper_moveit_config)/default_warehouse_mongo_db" />
 
   <!-- By default, we are not in debug mode -->
   <arg name="debug" default="false" />
@@ -28,7 +28,7 @@
   <arg name="urdf_path" default="$(find tm5_700_gripper_description)/urdf/tm700_robotiq_gripper.urdf.xacro"/>
 
   <!-- launch the gazebo simulator and spawn the robot -->
-  <include file="$(find tm5_700_gripper_new_moveit_config)/launch/gazebo.launch" >
+  <include file="$(find tm5_700_gripper_moveit_config)/launch/gazebo.launch" >
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
     <arg name="urdf_path" value="$(arg urdf_path)"/>

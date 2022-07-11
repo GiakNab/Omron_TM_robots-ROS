@@ -86,12 +86,12 @@ $ roslaunch tm5_700_gripper_moveit_config tm5_700_robotiq_gazebo_moveit.launch
 Create automatically collision objects in the Rviz scene and publish them to the planner.<br>
 2. run in a second shell:
 ```bash
-$ rosrun omronTM_python_move_interface tm5_700_boxes_scene.py
+$ rosrun omrontm_python_move_interface tm5_700_boxes_scene.py
 ```
 Create Automation with Python API giving logics, simulate grasping and plan trajectories avoiding obstacles.<br>
 3. run in a third shell:
 ```bash
-$ rosrun omronTM_python_move_interface TestTMclass_tm5_700.py
+$ rosrun omrontm_python_move_interface TestTMclass_tm5_700.py
 ```
 
 __Test_3__
@@ -102,6 +102,6 @@ $ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch
 ```
 2. run in a second shell:
 ```bash
-$ rosrun omronTM_python_move_interface TestTMclass_tm5_700_real_robot.py
+$ rosrun omrontm_python_move_interface TestTMclass_tm5_700_real_robot.py
 ```
 
