@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: tm12_description
+    relative_path: urdf/tm12_palletizer.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/tm12_palletizer.srdf
+  CONFIG:
+    author_name: giacomo nabissi
+    author_email: giacomo.nabissi@gmail.com
+    generated_timestamp: 1656574843

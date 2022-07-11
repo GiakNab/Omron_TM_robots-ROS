@@ -36,3 +36,4 @@ controller_list:
     type: FollowJointTrajectory
     joints:
       - robotiq_85_left_knuckle_joint
+      

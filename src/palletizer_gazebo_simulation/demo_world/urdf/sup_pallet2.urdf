@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="pallet2_gazebo">
+
+	<link name="world" />
+
+	<joint name="fixed4" type="fixed">
+		<parent link="world"/>
+		<child link="sup_pallet_2"/>
+		<origin xyz="0.6 -1.15 0" rpy="0.0 0.0 0"/>
+	</joint>
+
+	<link name="sup_pallet_2">
+		<inertial>
+			<!-- <origin xyz="1.1327E-16 -3.3286E-17 0.66019" rpy="0 0 0" /> -->
+			<origin xyz="0.60 0.40 0.08" rpy="0 0 0" />
+			<mass value="40" />
+			<inertia ixx="7.5972" ixy="0" ixz="0" iyy="0.99673" iyz="0" izz="8.1168" />
+		</inertial>
+		<visual>
+			<origin xyz="0.0 0.0 0.0" rpy="0 0 1.570796327" />
+			<geometry>
+				<mesh filename="package://demo_world/meshes/sup_pallet.stl" />
+			</geometry>
+			<material name="white">
+				<color rgba="0.5 0.5 1 1" />
+			</material>
+		</visual>
+	</link>
+
+</robot>
