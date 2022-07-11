@@ -1,4 +1,3 @@
-
 # __Omron TM robots ROS user guide__
 
 This repo has been forked from [TechmanRobot]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page.
@@ -7,7 +6,7 @@ This repo has been developed and tested using the __TM5-700__ and __TM12-1300__ 
 
 ## &sect; __How to navigate into this Repository__
 The __tmr_ros1__ folder is a metapackage containing the driver, standard msgs and urdf description folders of the TM Omron robots. <br>
-:bulb: With respect to TM driver here some urdf files has been changed to match with some specific applications (check __tm5_700_gripper_description__ and __tm12_description__). <br>
+:bulb: With respect to the original TM driver here some urdf files has been changed to match with some specific applications (check __tm5_700_gripper_description__ and __tm12_description__). <br>
 The other pkgs outside the metapkg has been developed to analyse and simulate specific applications with __TM5-700__ and __TM12-1300__ robots. 
 In particular the pkg __tm5_700_gripper_moveit_config__ has been developed to work with __TM5-700__ robot and __Robotiq_85__ gripper using MoveIt Python API and Gazebo simulator. While __tm12_palletizer_moveit_config__ pkg has been developed to work with __TM12-1300__ and __Schmalz_omron_spb2__ vacuum gripper using as well MoveIt Python API and Gazebo simulator.
 <br>
@@ -53,9 +52,9 @@ The robot and the pc must be physically connected through an __ethernet cable__ 
 :bulb:__WARNING__ Connect the ethernet cable to the __LAN__ port of the control box.
 
 <p align="center">
-  <img alt="1" src="src/figures/LAN.jpg" width="45%">
+  <img alt="1" src="src/tmr_ros1/figures/LAN.jpg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="2" src="src/figures/LAN1.jpg" width="45%">
+  <img alt="2" src="src/tmr_ros1/figures/LAN1.jpg" width="45%">
 </p>
 
 ### &sect; __TMFlow setup__
@@ -71,37 +70,37 @@ Check the robot-pc connection with a __ping__ to the robot ip address.
  ![13](src/tmr_ros1/figures/ping_target_host.png)
 
 ## __3. Usage__
-After following all the steps described in section 2, the following __launch file__ can be launched:
+After following all the steps described in section 2, is possible to use functionalities of these pkg running the following __launch file__ and __nodes__.
 
 __Test_1__
-Visualize tm5_700 with robotiq 85 gripper in rviz:
+Visualize tm5_700 with robotiq 85 gripper in rviz. <br>
 ```bash
 $ roslaunch tm5_700_gripper_moveit_config demo.launch
 ```
 __Test_2__
-Use tm5_700 with robotiq 85 gripper in Rviz and Gazebo, and test the OmronTMRobot Python class to plan path:
-1. run in the first shell<br>
+Use the tm5_700 with robotiq 85 gripper in Rviz and Gazebo, and test the OmronTMRobot Python class to plan path. <br>
+1. Run in the first shell:<br>
 ```bash
 $ roslaunch tm5_700_gripper_moveit_config tm5_700_robotiq_gazebo_moveit.launch
 ```
-Create automatically collision objects and publish them to the planner:<br>
-2. run in a second shell
+Create automatically collision objects in the Rviz scene and publish them to the planner.<br>
+2. run in a second shell:
 ```bash
-rosrun omronTM_python_move_interface tm5_700_boxes_scene.py
+$ rosrun omronTM_python_move_interface tm5_700_boxes_scene.py
 ```
-Create Automation with Python API giving logics, simulate grasping and plan trajectories avoiding obstacles:<br>
-3. run in a third shell
+Create Automation with Python API giving logics, simulate grasping and plan trajectories avoiding obstacles.<br>
+3. run in a third shell:
 ```bash
-rosrun omronTM_python_move_interface TestTMclass_tm5_700.py
+$ rosrun omronTM_python_move_interface TestTMclass_tm5_700.py
 ```
 
 __Test_3__
-Use the real tm5_700 with robotiq 85 gripper planning trajectories using the OmronTMRobot Python class:
-1. run in the first shell:<br>
+Use the real tm5_700  to plan trajectories with the OmronTMRobot Python class. <br>
+1. run in the first shell:
 ```bash
 $ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch
 ```
-2. run in a second shell:<br>
+2. run in a second shell:
 ```bash
 $ rosrun omronTM_python_move_interface TestTMclass_tm5_700_real_robot.py
 ```
