@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 tm5_700_robotiq: 
+=======
+tm12_palletizer: 
+>>>>>>> 3a3b310662dd1c52887554081be1a5d9a176a443
   joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 50
