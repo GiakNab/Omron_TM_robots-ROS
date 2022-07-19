@@ -30,7 +30,7 @@ class CubeSpawner():
          cube_urdf = f.read()
          quat = tf.transformations.quaternion_from_euler(0,0,0)
          orient = Quaternion(quat[0],quat[1],quat[2],quat[3])
-         pose = Pose(Point(x=1.0,y=+0.0,z=1.0), orient)
+         pose = Pose(Point(x=1.0,y=+0.42,z=0.87), orient) #tcp_offset 
          succeded = self.sm(self.name, cube_urdf, '', pose, 'world') 
 
          return succeded
@@ -43,6 +43,29 @@ class CubeSpawner():
     def shutdown_hook(self):
     	self.deleteModel()
     	print("Shutting down")
+
+class SlipsheetSpawner():
+    def __init__(self, name):
+        self.name = name
+        self.rospack = rospkg.RosPack()
+        self.path = self.rospack.get_path('demo_world')+"/urdf/"
+        self.cubes = []
+        self.cubes.append(self.path+"blue_slipsheet.urdf")
+       
+        self.sm = rospy.ServiceProxy("/gazebo/spawn_urdf_model", SpawnModel)
+        self.dm = rospy.ServiceProxy("/gazebo/delete_model", DeleteModel)
+        self.ms = rospy.ServiceProxy("/gazebo/get_model_state", GetModelState)
+
+    def spawnModel(self):
+		# print(self.col)
+    	with open(self.cubes[0],"r") as f:
+         cube_urdf = f.read()
+         quat = tf.transformations.quaternion_from_euler(0,0,0)
+         orient = Quaternion(quat[0],quat[1],quat[2],quat[3])
+         pose = Pose(Point(x=0.6,y=+0.1,z=0.7), orient) #tcp_offset 
+         succeded = self.sm(self.name, cube_urdf, '', pose, 'world') 
+
+         return succeded
 
 
 #if __name__ == "__main__":

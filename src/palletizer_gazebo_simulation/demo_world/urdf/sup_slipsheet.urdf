@@ -2,26 +2,26 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot name="pallet2_gazebo">
+<robot name="sup_slipsheets">
 
 	<link name="world" />
 
-	<joint name="fixed2" type="fixed">
+	<joint name="fixed1" type="fixed">
 		<parent link="world"/>
-		<child link="pallet_2"/>
-		<origin xyz="-0.507 -1.1276 0.19" rpy="0.0 0.0 0"/>
+		<child link="sup_slipsheet"/>
+		<origin xyz="0.67 0.0 0.0" rpy="0.0 0.0 0.0"/>
 	</joint>
 
-	<link name="pallet_2">
+	<link name="sup_slipsheet">
 		<inertial>
-			<origin xyz="0.60 0.40 0.08" rpy="0 0 0" />
+			<origin xyz="0.30 0.20 0.30" rpy="0 0 0" />
 			<mass value="40" />
 			<inertia ixx="7.5972" ixy="0" ixz="0" iyy="0.99673" iyz="0" izz="8.1168" />
 		</inertial>
 		<visual>
 			<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
 			<geometry>
-				<mesh filename="package://demo_world/meshes/pallet.stl" />
+				<mesh filename="package://demo_world/meshes/sup_slipsheet.stl" />
 			</geometry>
 			<material name="white">
 				<color rgba="0.5 0.5 1 1" />
@@ -30,9 +30,9 @@
 		<collision>
           <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
           <geometry>
-             <mesh filename="package://demo_world/meshes/collision_pallet.stl" />
+             <mesh filename="package://demo_world/meshes/sup_slipsheet.stl" />
           </geometry>
-        </collision> 
+        </collision>
 	</link>
 
 </robot>

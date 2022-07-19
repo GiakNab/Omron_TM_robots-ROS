@@ -9,7 +9,7 @@
 	<joint name="fixed0" type="fixed">
 		<parent link="world"/>
 		<child link="belt_visual"/>
-		<origin xyz="1.0 0.0 0.0" rpy="0.0 0.0 0"/>
+		<origin xyz="1.07 0.0 0.0" rpy="0.0 0.0 0"/>
 	</joint>
 	
 
@@ -30,24 +30,12 @@
 			</material>
 		</visual>
 		<collision>
-			<origin xyz="0.0 0.0 0" rpy="1.570796327 0.0 1.570796327"/>
+			<origin xyz="0.0 0.0 0" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://demo_world/meshes/conveyor_simple.stl" />
 			</geometry>
 		</collision>
 	</link>
-
-	<!-- <link name="test_cube">
-		<visual>
-			<origin xyz="0.0 0.0 0.37" rpy="0.0 0.0 0.0"/>
-			<geometry>
-				<box size="0.463 1.2 0.74"/>
-			</geometry>
-			<material name="purple">
-				<color rgba="1 0 1 0.2" />
-			</material>
-		</visual>
-	</link> -->
 
 	<joint name="belt_joint" type="prismatic">
 		<origin xyz="0.0 0.0 0.74" rpy="0.0 0.0 0.0"/>
@@ -63,15 +51,6 @@
 			<mass value="100"/>
 			<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
 		</inertial>
-		<!-- <visual>
-			<origin xyz="0.0 0.0 0.0005" rpy="0.0 0.0 0.0"/>
-			<geometry>
-				<box size="0.425 1.2 0.001"/>
-			</geometry>
-			<material name="test">
-				<color rgba="1 0 1 1" />
-			</material>
-		</visual> -->
 		<collision>
 			<origin xyz="0.0 0.0 0.0005" rpy="0.0 0.0 0.0"/>
 			<geometry>
@@ -79,7 +58,7 @@
 			</geometry>
 		</collision>
 	</link>
-
+<!-- 
 	<gazebo>
 		<plugin name="conveyor_belt_plugin" filename="libROSConveyorBeltPlugin.so">
 			<robot_namespace>/</robot_namespace>
@@ -88,4 +67,5 @@
 			<max_velocity>1.0</max_velocity>
 		</plugin>
 	</gazebo>
+	-->
 </robot>

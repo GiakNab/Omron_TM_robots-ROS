@@ -9,18 +9,17 @@
 	<joint name="fixed1" type="fixed">
 		<parent link="world"/>
 		<child link="pallet_1"/>
-		<origin xyz="0.6 0.37 0.19" rpy="0.0 0.0 0"/>
+		<origin xyz="0.666 1.2 0.19" rpy="0.0 0.0 3.14"/>
 	</joint>
 
 	<link name="pallet_1">
 		<inertial>
-			<!-- <origin xyz="1.1327E-16 -3.3286E-17 0.66019" rpy="0 0 0" /> -->
 			<origin xyz="0.60 0.40 0.08" rpy="0 0 0" />
 			<mass value="40" />
 			<inertia ixx="7.5972" ixy="0" ixz="0" iyy="0.99673" iyz="0" izz="8.1168" />
 		</inertial>
 		<visual>
-			<origin xyz="0.0 0.0 0.0" rpy="0 0 1.570796327" />
+			<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
 			<geometry>
 				<mesh filename="package://demo_world/meshes/pallet.stl" />
 			</geometry>
@@ -29,7 +28,7 @@
 			</material>
 		</visual>
 		<collision>
-          <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 1.570796327"/>
+          <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
           <geometry>
              <mesh filename="package://demo_world/meshes/collision_pallet.stl" />
           </geometry>
