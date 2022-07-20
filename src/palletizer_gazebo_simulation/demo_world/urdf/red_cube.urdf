@@ -18,13 +18,13 @@
     <collision>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.305 0.215 0.157"/>
+        <box size="0.305 0.215 0.158"/>
       </geometry>
     </collision>
   </link>
   
   <gazebo reference="base_link">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Orange</material>
   </gazebo> 
 </robot>
 

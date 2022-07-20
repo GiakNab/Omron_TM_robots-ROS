@@ -49,8 +49,8 @@ def get_homogen_transform (d, theta, phi, psi):
 
 def main():
   try:   
-    #Istantiate the object 'test' from class TMRobotMoveGroupPy, default planner ="RRTConnect"
-    tm12 = TMRobotMoveGroupPy("tm12_arm", "RRTConnect")
+    #Istantiate the object 'test' from class TMRobotMoveGroupPy, default planner ="RRTConnect" /EST/RRTStar(slow)
+    tm12 = TMRobotMoveGroupPy("tm12_arm", "EST")
     grasping_group="tm12_arm"
 
     tm12.move_group.allow_replanning(True)
@@ -76,7 +76,7 @@ def main():
     detach_srv.wait_for_service()
     rospy.loginfo("Created ServiceProxy to /link_attacher_node/detach")
 
-    r = rospy.Rate(5)
+    r = rospy.Rate(2)
 
     # define the cube to spawn
     name = ["Part0", "Part1", "Part2", "Part3","Part4", "Part5","Part6", "Part7", "Part8", "Part9"]
@@ -84,7 +84,7 @@ def main():
 
     #offset here
     z_offset = 0.785 
-    tcp_offset = [0.05, -0.05, -0.13]
+    tcp_offset = [0.05, -0.05, -0.14]
 
     #go to Idle Position
     IdlePosition = [math.radians(14.42), math.radians(-43.8), math.radians(108.61), math.radians(24.74), math.radians(88.85)

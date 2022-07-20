@@ -4,12 +4,12 @@
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <mass value="0.3"/>
-      <inertia ixx="0.011406" ixy="0.0" ixz="0.0" iyy="0.006391" iyz="0.0" izz="0.017766"/>
+      <inertia ixx="0.03799" ixy="0.0" ixz="0.0" iyy="0.002127" iyz="0.0" izz="0.05922"/>
     </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.505 0.675 0.025"/>
+        <box size="0.505 0.675 0.015"/>
       </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/>
@@ -23,7 +23,7 @@
     </collision>
   </link>
   <gazebo reference="base_link">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/DarkYellow</material>
   </gazebo>
 </robot>
 

@@ -9,7 +9,7 @@
 	<joint name="fixed1" type="fixed">
 		<parent link="world"/>
 		<child link="sup_slipsheet"/>
-		<origin xyz="0.67 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		<origin xyz="0.55 0.04 0.0" rpy="0.0 0.0 0.0"/>
 	</joint>
 
 	<link name="sup_slipsheet">
@@ -34,5 +34,8 @@
           </geometry>
         </collision>
 	</link>
+	<gazebo reference="sup_slipsheet">
+    <material>Gazebo/DarkGrey </material>
+  	</gazebo>
 
 </robot>

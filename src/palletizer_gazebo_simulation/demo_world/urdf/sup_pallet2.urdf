@@ -29,5 +29,7 @@
 			</material>
 		</visual>
 	</link>
-
+	<gazebo reference="sup_pallet_2">
+    <material>Gazebo/DarkGrey </material>
+  	</gazebo>
 </robot>

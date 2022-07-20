@@ -36,14 +36,14 @@
 			</geometry>
 		</collision>
 	</link>
-
+	<!-- 
 	<joint name="belt_joint" type="prismatic">
 		<origin xyz="0.0 0.0 0.74" rpy="0.0 0.0 0.0"/>
 		<parent link="belt_visual"/>
 		<child link="belt_moving"/>
 		<axis xyz="0 1 0"/>
 		<limit lower="0.0" upper="1" effort="1000" velocity="1000"/>
-	</joint>
+	</joint> 
 
 	<link name="belt_moving">
 		<inertial>
@@ -57,7 +57,10 @@
 				<box size="0.425 1.2 0.001"/>
 			</geometry>
 		</collision>
-	</link>
+	</link> -->
+	<gazebo reference="belt_visual">
+    <material>Gazebo/Grey </material>
+  	</gazebo>
 <!-- 
 	<gazebo>
 		<plugin name="conveyor_belt_plugin" filename="libROSConveyorBeltPlugin.so">

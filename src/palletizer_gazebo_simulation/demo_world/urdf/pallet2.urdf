@@ -34,5 +34,7 @@
           </geometry>
         </collision> 
 	</link>
-
+	<gazebo reference="pallet_2">
+    <material>Gazebo/Wood</material>
+  	</gazebo>
 </robot>
