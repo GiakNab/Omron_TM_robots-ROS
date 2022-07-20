@@ -205,9 +205,11 @@ def main():
         succeded2 = ss.spawnModel()
         print(succeded2)
 
-        tm12.joint_state_move(IdlePosition)
-
-        tm12.pose_state_move(sApproxPointPB1) 
+        waypoints = []
+        waypoints.append(copy.deepcopy(sApproxPointPB1))
+        cartesian_path1, fract1, waypoints1 = tm12.plan_cartesian_path(waypoints)
+        tm12.execute_plan(cartesian_path1, sApproxPointPB1)
+        #tm12.pose_state_move(sApproxPointPB1) 
         tm12.pose_state_move(sApproxPointPB0)
         tm12.pose_state_move(PickS)
 
@@ -228,9 +230,12 @@ def main():
         succeded = cs.spawnModel()
         print(succeded)
 
-        tm12.joint_state_move(IdlePosition)
+        waypoints = []
+        waypoints.append(copy.deepcopy(bApproxPointPB1))
+        cartesian_path1, fract1, waypoints1 = tm12.plan_cartesian_path(waypoints)
+        tm12.execute_plan(cartesian_path1, bApproxPointPB1)
 
-        tm12.pose_state_move(bApproxPointPB1) 
+        #tm12.pose_state_move(bApproxPointPB1) 
         tm12.pose_state_move(bApproxPointPB0)
         tm12.pose_state_move(PickB)
 
@@ -354,8 +359,12 @@ def main():
       tm12.pose_state_move(DeppartPoint1)
 
       #raw_input("wait?")
-
       i +=1
+
+      if i == num_parts:
+        tm12.joint_state_move(IdlePosition)
+      
+
       
 
   except rospy.ROSInterruptException:
