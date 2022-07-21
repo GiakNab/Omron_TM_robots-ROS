@@ -22,8 +22,13 @@
       </geometry>
     </collision>
   </link>
+
   <gazebo reference="base_link">
     <material>Gazebo/DarkYellow</material>
+    <kp>500</kp>
+    <kd>500</kd>
+    <mu1>300</mu> 
+    <mu2>300</mu2>
   </gazebo>
 </robot>
 

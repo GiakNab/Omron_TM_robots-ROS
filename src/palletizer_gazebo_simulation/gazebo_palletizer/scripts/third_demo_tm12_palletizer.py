@@ -50,11 +50,11 @@ def get_homogen_transform (d, theta, phi, psi):
 def main():
   try:   
     #Istantiate the object 'test' from class TMRobotMoveGroupPy, default planner ="RRTConnect" /EST/RRTStar(slow)
-    tm12 = TMRobotMoveGroupPy("tm12_arm", "EST")
+    tm12 = TMRobotMoveGroupPy("tm12_arm", "RRTConnect")
     grasping_group="tm12_arm"
 
     tm12.move_group.allow_replanning(True)
-    tm12.move_group.set_planning_time(10) #seconds
+    tm12.move_group.set_planning_time(5) #seconds
 
     planning_frame = tm12.move_group.get_planning_frame()
     
@@ -267,7 +267,12 @@ def main():
       ApproxPoint1.orientation.w = AproxPoint1quat[3]
 
       #move to AproxPoint1 to place the boxes and slipsheet
-      tm12.pose_state_move(ApproxPoint1) #ok
+      waypoints = []
+      waypoints.append(copy.deepcopy(ApproxPoint1))
+      cartesian_path1, fract1, waypoints1 = tm12.plan_cartesian_path(waypoints)
+      tm12.execute_plan(cartesian_path1, ApproxPoint1)
+     
+      #tm12.pose_state_move(ApproxPoint1) 
 
       #The base frame wrt the vision task base
       VisionTaskBase = np.array([0.667, 1.138, -0.42777, 0, 0, math.radians(180)])
@@ -292,7 +297,7 @@ def main():
       print( "Target Position of current orinet = ",TargetPositionquat)
       #raw_input("I'm waiting, press enter to continue")
 
-      TargetPoint = np.array([TargetPosition[0], TargetPosition[1], TargetPosition[2] + 0.03, 1]).T 
+      TargetPoint = np.array([TargetPosition[0], TargetPosition[1], TargetPosition[2] + 0.04, 1]).T 
       d = np.array([VisionTaskBase[0], VisionTaskBase[1], VisionTaskBase[2]]).T
       theta = VisionTaskBase[3]
       phi = VisionTaskBase[4]

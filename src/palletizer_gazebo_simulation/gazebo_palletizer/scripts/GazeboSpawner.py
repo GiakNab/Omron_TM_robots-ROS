@@ -62,7 +62,7 @@ class SlipsheetSpawner():
          cube_urdf = f.read()
          quat = tf.transformations.quaternion_from_euler(0,0,0)
          orient = Quaternion(quat[0],quat[1],quat[2],quat[3])
-         pose = Pose(Point(x=0.55,y=+0.08,z=0.7), orient) #tcp_offset 
+         pose = Pose(Point(x=0.53,y=+0.08,z=0.7), orient) #tcp_offset 
          succeded = self.sm(self.name, cube_urdf, '', pose, 'world') 
 
          return succeded

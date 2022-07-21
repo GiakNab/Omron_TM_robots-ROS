@@ -9,7 +9,7 @@
 	<joint name="fixed3" type="fixed">
 		<parent link="world"/>
 		<child link="sup_pallet_1"/>
-		<origin xyz="0.666 1.2 0.0" rpy="0.0 0.0 3.14"/>
+		<origin xyz="0.675 1.205 0.0" rpy="0.0 0.0 3.14"/>
 	</joint>
 
 	<link name="sup_pallet_1">
