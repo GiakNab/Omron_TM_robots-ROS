@@ -79,8 +79,7 @@ def main():
 
     r = rospy.Rate(10)
 
-    # define the cube to spawn
-    #name = ["Part0", "Part1", "Part2", "Part3","Part4", "Part5","Part6", "Part7", "Part8", "Part9"]
+    # define the Parts to spawn
     name = XMLparams.PartName
     LocationID = XMLparams.LocationID
     num_parts = len(name)
@@ -96,8 +95,6 @@ def main():
     IdlePosition = XMLparams.IdlePosition
 
     #Define boxes ApproxPointPB1 
-    #bAproxPointPB1 = [0.622 - tcp_offset[0], -0.067 - tcp_offset[1] , 0.488 + (- tcp_offset[2]) + z_offset, math.radians(180), 0, 0] #absolute
-    #bAproxPointPB1quat = get_quaternion_from_euler(bAproxPointPB1[3], bAproxPointPB1[4], bAproxPointPB1[5])
 
     AproxPointPB1 = XMLparams.AproxPointPB1 #AproxPointPickBoxes1
     AproxPointPB1quat = get_quaternion_from_euler(AproxPointPB1[3], AproxPointPB1[4], AproxPointPB1[5])
@@ -152,8 +149,7 @@ def main():
     DeppartPointPB1.orientation.z = DepartPointPB1quat[2]
     DeppartPointPB1.orientation.w = DepartPointPB1quat[3]
 
-    #Define Slipsheet ApproxPointPB1 
-    #sAproxPointPB1 = [0.625 - tcp_offset[0], -0.019 - tcp_offset[1] , 0.509 + (- tcp_offset[2]) + z_offset, math.radians(180), 0, math.radians(90)] #absolute
+    #Define Slipsheet ApproxPointPB1
     AproxPointPS1 = XMLparams.AproxPointPS1
     AproxPointPS1quat = get_quaternion_from_euler(AproxPointPS1[3], AproxPointPS1[4], AproxPointPS1[5])
 
@@ -167,7 +163,6 @@ def main():
     ApproxPointPS1.orientation.w = AproxPointPB1quat[3]
 
     # PS = PickSlisheet define Slipsheet pick position
-    #PickSlipsheet = [0.626 - tcp_offset[0], -0.018 - tcp_offset[1], -0.085 + (- tcp_offset[2]) + z_offset,  math.radians(180), 0, math.radians(90)] #PickSlip (PS)
     PickSlipsheet = XMLparams.PickSlipsheet
     PickSlipquat = get_quaternion_from_euler(PickSlipsheet[3], PickSlipsheet[4],PickSlipsheet[5])
 
@@ -195,7 +190,6 @@ def main():
     DeppartPointPS0 = ApproxPointPS0
 
     # DepartPointPS1 absolute point
-    #sDepartPointPB1 = [0.75 - tcp_offset[0], 0.265 - tcp_offset[1], 0.508 + (- tcp_offset[2]) + z_offset, math.radians(180), 0, 0] #absolute
     DepartPointPS1 = XMLparams.DepartPointPS1
     DepartPointPS1quat = get_quaternion_from_euler(DepartPointPS1[3], DepartPointPS1[4], DepartPointPS1[5])
 
@@ -210,8 +204,7 @@ def main():
 
     # START MOVIMENTATION
     #first go to IdlePose
-    tm12.joint_state_move(IdlePosition)
-    
+    tm12.joint_state_move(IdlePosition)   
     #then go to different picking position (PB or PS) reading the LocationID flag
     i=0
     while i<num_parts:
@@ -272,10 +265,6 @@ def main():
         break
 
       # Define From XML file (Aprox0/1 & Depart0/1 Points absolute and relative)
-      #AproxPoint1 = [0.430 - tcp_offset[0], 0.700 - tcp_offset[1], 0.300 - tcp_offset[2] + z_offset, math.radians(180), 0, 0] #absolute
-      #DepartPoint1 = AproxPoint1
-      #DepartPoint1quat = AproxPoint1quat
-      
       AproxPoint1 =XMLparams.AproxPoint1
       AproxPoint1quat = get_quaternion_from_euler(AproxPoint1[3], AproxPoint1[4],AproxPoint1[5])
 
@@ -302,9 +291,6 @@ def main():
        math.radians(TargPositions[3 + i*6]), math.radians(TargPositions[4 + i*6]), math.radians(TargPositions[5 + i*6])] #relative
       TargetPositionquat = get_quaternion_from_euler(TargetPosition[3], TargetPosition[4], TargetPosition[5] - VisionTaskBase[5])
 
-      #print( "Target Position of current Part = ",TargetPosition)
-      #print( "Target Position of current orient = ",TargetPositionquat)
-      
       #Get the transformation matrix T between Robot and Vision task bases
       TargetPoint = np.array([TargetPosition[0], TargetPosition[1], TargetPosition[2] + 0.02, 1]).T 
       d = np.array([VisionTaskBase[0], VisionTaskBase[1], VisionTaskBase[2]]).T

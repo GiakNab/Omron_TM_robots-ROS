@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 In this Part you have to set different parameters which are not stored in the XML file
 '''
 #off-sets
-tcp_offset = [0.05, -0.05, -0.14] # tcp offset wrt the wrist 3 of the TM12
+tcp_offset = [0.05, -0.05, -0.15] # tcp offset wrt the wrist 3 of the TM12
 # from the height has been removed 12 cm relative to the support of the prismatic joint of the TM12
 z_offset = 0.9 - 0.115 #meters (height of the base)
 print(z_offset)
@@ -21,7 +21,7 @@ AproxPointPB1 = [0.622, -0.067, 0.488, math.radians(180), 0, 0] #absolute
 DepartPointPB0 = [0, 0, 0.150, 0, 0, 0] #relative
 DepartPointPB1 = [0.75, 0.265, 0.508, math.radians(180), 0, 0]
 
-PickSlipsheet = [0.6269, -0.01848, -0.121,  math.radians(180), 0,  math.radians(90)] #PickSlipsheet (PS) line movement
+PickSlipsheet = [0.6269, -0.01848, -0.1185,  math.radians(180), 0,  math.radians(90)] #PickSlipsheet (PS) line movement
 AproxPointPS0 = [0, 0, 0.350, 0, 0, 0] #relative
 AproxPointPS1 = [0.625, -0.019, 0.509, math.radians(180), 0, math.radians(90)] #absolute
 DepartPointPS0 = [0, 0, 0.350, 0, 0, 0] #relative
