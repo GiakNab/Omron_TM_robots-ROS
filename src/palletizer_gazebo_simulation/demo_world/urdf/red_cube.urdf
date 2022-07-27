@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
 <robot name="red_cube">
-  <link name="base_link">
+  <link name="base_link"> 
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <mass value="0.3"/>
-      <inertia ixx="4.166666666666668e-04" ixy="0.0" ixz="0.0" iyy="4.166666666666668e-04" iyz="0.0" izz="4.166666666666668e-04"/>
-    </inertial>
+      <inertia ixx="0.00277797" ixy="0.0" ixz="0.0" iyy="0.00295" iyz="0.0" izz="0.003481"/>
+    </inertial> 
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.30 0.21 0.165"/>
+        <box size="0.305 0.215 0.158"/>
       </geometry>
       <material name="bo">
         <color rgba="1 1 0 1"/>
@@ -18,12 +18,18 @@
     <collision>
       <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <box size="0.30 0.21 0.165"/>
+        <box size="0.305 0.215 0.158"/>
       </geometry>
     </collision>
   </link>
+  
   <gazebo reference="base_link">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Orange</material> 
+    <kp>500</kp>
+    <kd>500</kd>
+    <mu1>300</mu> 
+    <mu2>300</mu2>
   </gazebo>
+
 </robot>
 

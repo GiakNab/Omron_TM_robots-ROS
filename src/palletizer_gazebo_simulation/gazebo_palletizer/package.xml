@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package>
-  <name>gazebo_ros_link_attacher</name>
+  <name>gazebo_palletizer</name>
   <version>0.0.0</version>
-  <description>The gazebo_ros_link_attacher package lets you attach
+  <description>The gazebo_palletizer package lets you attach
     by a virtual joint temporarily two links in a Gazebo simulation.</description>
 
-  <maintainer email="sam.pfeiffer@pal-robotics.com">Sam Pfeiffer</maintainer>
+  <maintainer email="g.nabissi@univpm.it">Giacomo Nabissi</maintainer>
 
 
   <license>BSD</license>

@@ -42,6 +42,9 @@
         <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
       </inertial>
     </link> 
+    <gazebo reference="vacuum_gripper">
+    <material>Gazebo/DarkGrey </material>
+  	</gazebo>
 
     <!-- Joint to connect the robot with the world frame --> 
     <link name="world" />
@@ -68,6 +71,9 @@
         <inertia ixx="1e-05" ixy="0" ixz="0" iyy="1e-05" iyz="0" izz="1e-05"/>
       </inertial>
     </link>
+    <gazebo reference="support">
+    <material>Gazebo/Grey </material>
+  	</gazebo>
 
     <!-- Joint to connect the cylindrical base (support) with the base of the tm12_arm --> 
     <joint name="sup_joint" type="fixed">

@@ -8,7 +8,7 @@ from tf.transformations import quaternion_from_euler
 sdf_cube = """<?xml version="1.0" ?>
 <sdf version="1.4">
   <model name="MODELNAME">
-  <static>0</static>
+    <static>0</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gazebo_ros_link_attacher)
+project(gazebo_palletizer)
 
 #####################################
 ## Check c++11 / c++0x support ######
