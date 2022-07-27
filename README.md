@@ -2,7 +2,7 @@
 
 This repo has been forked from [TechmanRobot]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page. <br>
 The additional packages you will find in this repo have been developed in collaboration with the Robotics team of the 
-&nbsp [<img height="40" alt="Omron" src="src/tmr_ros1/figures/omron_logo.png">](https://industrial.omron.eu/en/home) &nbsp; __ATC Barcelona__ during my PhD visiting period. <br/>
+[<img height="40" alt="Omron" src="src/tmr_ros1/figures/omron_logo.png">](https://industrial.omron.eu/en/home) &nbsp; __ATC Barcelona__ during my PhD visiting period. <br/>
 This repo has been developed and tested using the __TM5-700__ and __TM12-1300__ with __TMFlow 1.84.2200__ , with __ROS Melodic__, __MoveIt__, __Gazebo 9.19.0__ under __Ubuntu 18.04__.<br/>
 
 ![1](src/tmr_ros1/figures/OmronTMfamily.png)
