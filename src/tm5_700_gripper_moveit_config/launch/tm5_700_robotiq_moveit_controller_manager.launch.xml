@@ -6,10 +6,5 @@
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
   <!-- loads ros_controllers to the param server -->
-<<<<<<< HEAD
-  <rosparam file="$(find tm5_700_gripper_moveit_config)/config/ros_controllers.yaml"/>
-=======
   <rosparam file="$(find tm5_700_gripper_moveit_config)/config/ros_controllers.yaml"/> 
-
->>>>>>> 3a3b310662dd1c52887554081be1a5d9a176a443
 </launch>
