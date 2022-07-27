@@ -1,9 +1,11 @@
 # __Omron TM robots ROS user guide__
 
-This repo has been forked from [TechmanRobot]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page.
-The additional packages you will find in this repo have been developed in collaboration with the Robotics team of the Omron ATC Barcelona during my PhD visiting period. <br/>
+This repo has been forked from [TechmanRobot]( https://github.com/TechmanRobotInc/tmr_ros1), which provides the driver to connect with the physical robot, for any issue regarding the ROS driver refers to techman robot page. <br>
+The additional packages you will find in this repo have been developed in collaboration with the Robotics team of the 
+[<img height="60" alt="Omron" src="src/tmr_ros1/figures/omron_logo.png">](https://industrial.omron.eu/en/home) &nbsp; ATC Barcelona during my PhD visiting period. <br/>
 This repo has been developed and tested using the __TM5-700__ and __TM12-1300__ with __TMFlow 1.84.2200__ , with __ROS Melodic__, __MoveIt__, __Gazebo 9.19.0__ under __Ubuntu 18.04__.<br/>
 
+![1](src/tmr_ros1/figures/OmronTMfamily.png)
 ## &sect; __How to navigate into this Repository__
 The __tmr_ros1__ folder is a metapackage containing the driver, standard msgs and urdf description folders of the TM Omron robots. <br>
 :bulb: With respect to the original TM driver here some urdf files has been changed to match with some specific applications (check __tm5_700_gripper_description__ and __tm12_description__). <br>
