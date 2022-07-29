@@ -111,7 +111,7 @@ $ rosrun omrontm_python_move_interface TestTMclass_tm5_700_real_robot.py
 Simulation of a palletizing application with tm12_1300: <br>
 1. run in the first shell:
 ```bash
-$ roslaunch tm12_palletizer_moveit_config tm12_gazebo_moveit.launch
+$ roslaunch tm12_palletizer_moveit_config tm12_palletizer_gazebo_moveit.launch
 ```
 2. run in a second shell:
 ```bash
