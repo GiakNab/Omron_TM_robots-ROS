@@ -100,7 +100,7 @@ $ rosrun omrontm_python_move_interface TestTMclass_tm5_700.py
 Use the real tm5_700  to plan trajectories with the OmronTMRobot Python class. <br>
 1. run in the first shell:
 ```bash
-$ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch
+$ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch sim:=False robot_ip:=169.254.xxx.xxx
 ```
 2. run in a second shell:
 ```bash
