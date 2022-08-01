@@ -14,15 +14,6 @@ from OmronTMRobot import TMRobotMotionFunctions
 
 
 def all_close(goal, actual, tolerance=0.01):
-  """
-  This function is used to check the difference within two string, to check if the robot achieve the goal position.
-  Is important for relative movements, because the planner must calculate relative path once the previous trajectory has finished.
-  Convenience method for testing if a list of values are within a tolerance of their counterparts in another list
-  @param: goal       A list of floats, a Pose or a PoseStamped
-  @param: actual     A list of floats, a Pose or a PoseStamped
-  @param: tolerance  A float
-  @returns: bool
-  """
   all_equal = True
   if type(goal) is list:
     for index in range(len(goal)):
@@ -42,61 +33,55 @@ def main():
     #Istantiate the object 'test' from class TMRobotMoveGroupPy, default planner ="SBL"
     tm5_700 = TMRobotMoveGroupPy("manipulator","RRT")
     tm5_700_srv = TMRobotMotionFunctions() 
+    tm5_700.move_group.allow_replanning(True)
+    tm5_700.move_group.set_planning_time(5) #seconds
     
     print("end-effector information", tm5_700.eef_link)
 
-    joint_goal0 = [pi, 0, pi/2, 0, pi/2, 0]
-    joint_goal1 = [pi, 0, pi/2, 0, pi/2, -pi/2]
-    joint_goal2 = [2.2, 0, pi/2, 0, pi/2, 0]
+    joint_goal0 = [4.3542683822795546e-05, 1.2441950638137277e-05, 1.5707714262387042, -7.757019085584033e-05, 1.5708350757887573, -3.8785095427920166e-05]
+    joint_goal1 = [0.7930810502471907, 0.5522671055217566, 1.9243468073114014, -0.905845216334571, 1.5707091082691964, 0.7931648732425008]
+    joint_goal2 = [0.3103209178588754, -0.010762287534633356, 1.9920371716862724, -0.43494573817703264, 1.5562615925135712, 0.4141860312952151]
+    joint_goal3 = [-0.30892122696895696, 0.41599664794133273, 2.013169887568269, -0.8867726552928323, 1.5730942353414714, -0.20490165018939266]
 
-    pose_goal0 = geometry_msgs.msg.Pose()
-    pose_goal0.position.x = -0.35
-    pose_goal0.position.y = 0.32
-    pose_goal0.position.z = 0.38
-    pose_goal0.orientation.x = -0.7070
-    pose_goal0.orientation.y = 0.7070
-    pose_goal0.orientation.z = 1.55e-5
-    pose_goal0.orientation.w = 3.8e-5
+    pose_goal2 = geometry_msgs.msg.Pose()
+    pose_goal2.position.x = -0.28
+    pose_goal2.position.y = 0.43
+    pose_goal2.position.z = 0.08
+    pose_goal2.orientation.x = 0
+    pose_goal2.orientation.y = 1
+    pose_goal2.orientation.z = 0
+    pose_goal2.orientation.w = 0
 
-#    i=0
-#   while i<2:
-    print ("============ Press `Enter` to move to a joint state goal ...")
-    raw_input()
-    i=0
-    #while i<5:
-    tm5_700.joint_state_move(joint_goal0)
-    tm5_700_srv.assign_QueueTag(1)
-    
-      #tm5_700.joint_state_move(joint_goal1)
-    tm5_700.joint_state_move(joint_goal2)
-    
-      #tm5_700.pose_state_move(pose_goal0)
-    tm5_700_srv.assign_QueueTag(2)
+    i = 0
 
-      #plan a cartesian path
-    wait=True
+    while i <= 5:
+  
+      tm5_700.joint_state_move(joint_goal0)
+      tm5_700_srv.assign_QueueTag(1)
 
-    while(wait):
-        #if all_close(pose_goal0, tm5_700.move_group.get_current_pose().pose):
-       if all_close(joint_goal2, tm5_700.move_group.get_current_joint_values()):
-        pose_goal1 =  tm5_700.move_group.get_current_pose().pose
-        pose_goal1.position.z += 0.1 #movement of 0.1 m along z axes of end-effector
-        cartesian_path, fract, waypoints = tm5_700.plan_cartesian_path(pose_goal1)
-        #movement along x and y to append to the previous one
-        pose_goal1.position.x -= 0.1 
-        pose_goal1.position.y += 0.1 
-        cartesian_path, fract, waypoints = tm5_700.plan_cartesian_path(pose_goal1,waypoints)
+      wait = True   
+      while wait:
+       if all_close(joint_goal0, tm5_700.move_group.get_current_joint_values()):
+        tm5_700.joint_state_move(joint_goal1)
+        tm5_700_srv.assign_QueueTag(2)
         wait=False
-       else:
-        wait=True
-
-      #display and execute in Rviz the movement
-    tm5_700.display_trajectory(cartesian_path)
-    tm5_700.execute_plan(cartesian_path)
-    tm5_700_srv.assign_QueueTag(3)
-
-    #i=i+1
-
+    
+      wait = True
+      while wait:
+        if all_close(joint_goal1, tm5_700.move_group.get_current_joint_values()):
+          tm5_700.joint_state_move(joint_goal2)
+          tm5_700_srv.assign_QueueTag(3)
+          wait=False
+   
+      wait = True
+      while wait:
+       if all_close(joint_goal2, tm5_700.move_group.get_current_joint_values()):   
+        tm5_700.joint_state_move(joint_goal3)
+        tm5_700_srv.assign_QueueTag(4)
+        wait = False
+      
+      i +=1
+    
 
   except rospy.ROSInterruptException:
     return
