@@ -74,12 +74,12 @@ Check the robot-pc connection with a __ping__ to the robot ip address.
 ## __3. Usage__
 After following all the steps described in section 2, is possible to use functionalities of these pkg running the following __launch file__ and __nodes__.
 
-__Test_1__
+:bulb:__Test_1__
 Visualize tm5_700 with robotiq 85 gripper in rviz. <br>
 ```bash
 $ roslaunch tm5_700_gripper_moveit_config demo.launch
 ```
-__Test_2__
+:bulb:__Test_2__
 Use the tm5_700 with robotiq 85 gripper in Rviz and Gazebo, and test the OmronTMRobot Python class to plan path. <br>
 1. Run in the first shell:<br>
 ```bash
@@ -96,14 +96,25 @@ Create Automation with Python API giving logics, simulate grasping and plan traj
 $ rosrun omrontm_python_move_interface TestTMclass_tm5_700.py
 ```
 
-__Test_3__
+:bulb:__Test_3__
 Use the real tm5_700  to plan trajectories with the OmronTMRobot Python class. <br>
 1. run in the first shell:
 ```bash
-$ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch
+$ roslaunch tm5_700_moveit_config tm5_700_moveit_planning_execution.launch sim:=False robot_ip:=169.254.xxx.xxx
 ```
 2. run in a second shell:
 ```bash
 $ rosrun omrontm_python_move_interface TestTMclass_tm5_700_real_robot.py
+```
+
+:bulb:__Test_4__
+Simulation of a palletizing application with tm12_1300: <br>
+1. run in the first shell:
+```bash
+$ roslaunch tm12_palletizer_moveit_config tm12_palletizer_gazebo_moveit.launch
+```
+2. run in a second shell:
+```bash
+$ rosrun gazebo_palletizer testfinal_demo_tm12_palletizer.py
 ```
 
