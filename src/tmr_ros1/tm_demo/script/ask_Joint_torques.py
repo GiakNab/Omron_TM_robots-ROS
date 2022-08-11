@@ -24,7 +24,7 @@ def ask_item_demo():
 
     r = rospy.Rate(40) #Hz
     Joint_Torques = []
-    tot = 100
+    tot = 50000
     i = 0
     
     #write binary = wb
