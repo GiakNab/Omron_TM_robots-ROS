@@ -20,7 +20,7 @@ If 'wait_time' > 0,
 the service call is blocking with timeout 'wait_time' sec. until the result is received.
 You can get result in response data.
 """
-
+import pickle
 import rospy
 from tm_msgs.msg import *
 from tm_msgs.srv import *
@@ -38,7 +38,26 @@ def ask_item_demo():
     rospy.wait_for_service('tm_driver/ask_item')
     ask_item = rospy.ServiceProxy('tm_driver/ask_item', AskItem, persistent=True)
 
-    rospy.sleep(0.5)
+    r = rospy.Rate(40) #Hz
+    Joint_Torques = []
+    i = 0
+    
+    #write binary = wb
+    file = open('testt', 'wb')
+
+    while i <= 11 :
+
+      resj = ask_item('jt', 'Joint_Torque', 1) 
+      Joint_Torques.append(resj.value)
+      #print("joint torques :=", Joint_Torques)
+      i +=1
+      if i == 10:
+        pickle.dump(Joint_Torques, file)
+        print(Joint_Torques)
+      r.sleep()
+
+    file.close()
+    raw_input("stop?")
 
     # ask hand-eye info. (non-block)
     #res0 = ask_item('he0', 'HandCamera_Value', 0)
@@ -72,8 +91,6 @@ def ask_item_demo():
     #resd = ask_item('dd', 'DeltaDH', 1)
     #rospy.loginfo('id: %s, value: %s\n', resd.id, resd.value)
 
-
-    resj = ask_item('jt', 'Joint_Torque', 1)
     #rospy.loginfo('id: %s, value: %s\n', resj.id, resj.value)
 
     """
@@ -99,8 +116,6 @@ def ask_item_demo():
                  -sb * ca,     sa,              cb * ca,         d
     ]
     """
-
-    rospy.sleep(2)
 
 if __name__ == '__main__':
     try:

@@ -43,6 +43,13 @@ def main():
     joint_goal2 = [0.3103209178588754, -0.010762287534633356, 1.9920371716862724, -0.43494573817703264, 1.5562615925135712, 0.4141860312952151]
     joint_goal3 = [-0.30892122696895696, 0.41599664794133273, 2.013169887568269, -0.8867726552928323, 1.5730942353414714, -0.20490165018939266]
 
+    joint_goal_start = [3.3194939449359584, 0.16316996584212143, 0.4780757318994068, 1.0103808138648518, 1.537014527841405, 0.13796828103199826]
+    joint_goal_a = [3.60335069814758, -0.19406333356682673, 1.3558989342175687, 0.4909611039386189, 1.5716204419942217, 0.4209928047253486]
+    joint_goal_b = [2.9391061243244527, -0.08240303942890581, 1.9863947322847215, -0.2708751078990032, 1.5094287063220373, -0.24198020954580698]
+    joint_goal_c = [3.97450027925371, -0.07385542417321474, 1.2835738705976327, 0.44551469270009386, 1.5930880503832958, 0.7905081037390378]
+    joint_goal_d = [3.9903263803476148, -0.10617961680545715, 2.13813672434942, -0.37702990737205216, 1.5945328152746638, 0.8064681618357737]
+
+
     pose_goal2 = geometry_msgs.msg.Pose()
     pose_goal2.position.x = -0.28
     pose_goal2.position.y = 0.43
@@ -54,33 +61,55 @@ def main():
 
     i = 0
 
-    while i <= 5:
-  
-      tm5_700.joint_state_move(joint_goal0)
-      tm5_700_srv.assign_QueueTag(1)
+    tm5_700.joint_state_move(joint_goal_start)
+    tm5_700_srv.assign_QueueTag(1)
+    rospy.sleep(0.5)
 
-      wait = True   
-      while wait:
-       if all_close(joint_goal0, tm5_700.move_group.get_current_joint_values()):
-        tm5_700.joint_state_move(joint_goal1)
+    while i <= 5: 
+
+        tm5_700.joint_state_move(joint_goal_a)
         tm5_700_srv.assign_QueueTag(2)
-        wait=False
     
-      wait = True
-      while wait:
-        if all_close(joint_goal1, tm5_700.move_group.get_current_joint_values()):
-          tm5_700.joint_state_move(joint_goal2)
-          tm5_700_srv.assign_QueueTag(3)
-          wait=False
+        wait = True
+        while wait:
+          if all_close(joint_goal_a, tm5_700.move_group.get_current_joint_values()):
+            tm5_700.joint_state_move(joint_goal_b)
+            tm5_700_srv.assign_QueueTag(3)
+            wait=False
    
-      wait = True
-      while wait:
-       if all_close(joint_goal2, tm5_700.move_group.get_current_joint_values()):   
-        tm5_700.joint_state_move(joint_goal3)
-        tm5_700_srv.assign_QueueTag(4)
-        wait = False
-      
-      i +=1
+        wait = True
+        while wait:
+         if all_close(joint_goal_b, tm5_700.move_group.get_current_joint_values()):   
+          tm5_700.joint_state_move(joint_goal_a)
+          tm5_700_srv.assign_QueueTag(4)
+          wait = False
+
+        wait = True
+        while wait:
+         if all_close(joint_goal_a, tm5_700.move_group.get_current_joint_values()):   
+          tm5_700.joint_state_move(joint_goal_c)
+          tm5_700_srv.assign_QueueTag(5)
+          wait = False
+
+        wait = True
+        while wait:
+         if all_close(joint_goal_c, tm5_700.move_group.get_current_joint_values()):   
+          tm5_700.joint_state_move(joint_goal_d)
+          tm5_700_srv.assign_QueueTag(6)
+          wait = False
+
+        wait = True
+        while wait:
+         if all_close(joint_goal_d, tm5_700.move_group.get_current_joint_values()):   
+          tm5_700.joint_state_move(joint_goal_c)
+          tm5_700_srv.assign_QueueTag(7)
+          wait = False
+        
+        wait = True
+        while wait:
+         if all_close(joint_goal_c, tm5_700.move_group.get_current_joint_values()):
+          i +=1
+          wait = False
     
 
   except rospy.ROSInterruptException:

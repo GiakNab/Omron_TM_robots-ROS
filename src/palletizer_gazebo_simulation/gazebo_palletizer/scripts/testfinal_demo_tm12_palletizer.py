@@ -157,10 +157,10 @@ def main():
     ApproxPointPS1.position.x = AproxPointPS1[0] - tcp_offset[0]
     ApproxPointPS1.position.y = AproxPointPS1[1] - tcp_offset[1]
     ApproxPointPS1.position.z = AproxPointPS1[2] - tcp_offset[2] + z_offset
-    ApproxPointPS1.orientation.x = AproxPointPB1quat[0]
-    ApproxPointPS1.orientation.y = AproxPointPB1quat[1]
-    ApproxPointPS1.orientation.z = AproxPointPB1quat[2]
-    ApproxPointPS1.orientation.w = AproxPointPB1quat[3]
+    ApproxPointPS1.orientation.x = AproxPointPS1quat[0]
+    ApproxPointPS1.orientation.y = AproxPointPS1quat[1]
+    ApproxPointPS1.orientation.z = AproxPointPS1quat[2]
+    ApproxPointPS1.orientation.w = AproxPointPS1quat[3]
 
     # PS = PickSlisheet define Slipsheet pick position
     PickSlipsheet = XMLparams.PickSlipsheet
@@ -219,6 +219,7 @@ def main():
         cartesian_path1, fract1, waypoints1 = tm12.plan_cartesian_path(waypoints)
 
         tm12.execute_plan(cartesian_path1, ApproxPointPS1)
+        #tm12.pose_state_move(ApproxPointPS1)
         tm12.pose_state_move(ApproxPointPS0)
         tm12.pose_state_move(PickS)
 
