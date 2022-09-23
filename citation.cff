@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Nabissi"
+  given-names: "Giacomo"
+  orcid: "https://orcid.org/0000-0002-5386-1651"
+title: "Omron_TM_robots-ROS"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2022-09-23
+url: "https://github.com/GiakNab/Omron_TM_robots-ROS"
